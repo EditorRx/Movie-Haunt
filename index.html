@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movie Haunt — Free Movies</title>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Extra CSS for logo */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-left {
+      position: relative;
+      padding-top: 80px; /* space for logo */
+      text-align: left;
+    }
+    .channel-logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+      background: #000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    @media (max-width: 600px) {
+      .channel-logo {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top marquee -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span class="m1">Movie Haunt - Free Movies</span>
+      <span class="m2">Movie Haunt - Free Movies</span>
+      <span class="m3">Movie Haunt - Free Movies</span>
+    </div>
+  </div>
+
+  <!-- Header / hero -->
+  <header class="hero">
+    <div class="hero-left">
+      <!-- Circular Logo -->
+      <img src="images/logo.png" alt="Channel Logo" class="channel-logo" />
+      
+      <h1 class="site-title">Movies Haunt</h1>
+      <p class="tagline">Free Movies & Web Series — join our Telegram for downloads in good quality.</p>
+      <a id="join-telegram" class="btn primary" href="https://t.me/MovieHaunters" target="_blank" rel="noopener">Join Telegram</a>
+    </div>
+
+    <div class="hero-right">
+      <input id="searchInput" type="search" placeholder="Search movies, genre, year..." />
+    </div>
+  </header>
+
+  <!-- Category buttons -->
+  <nav class="genres" id="genres">
+    <!-- JS injects genre buttons -->
+  </nav>
+
+  <!-- Latest 2025 section -->
+  <section class="section">
+    <h2>Latest 2025</h2>
+    <div class="grid" id="latestGrid"></div>
+  </section>
+
+  <!-- All movies -->
+  <section class="section">
+    <h2>All Movies</h2>
+    <div class="grid" id="moviesGrid"></div>
+  </section>
+
+  <!-- Modal for details -->
+  <div id="modal" class="modal">
+    <div class="modal-inner">
+      <button id="modalClose" class="modal-close">✕</button>
+      <div class="modal-body">
+        <img id="modalPoster" alt="poster" />
+        <div class="modal-meta">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <ul class="meta-list">
+            <li><strong>Rating:</strong> <span id="modalRating"></span></li>
+            <li><strong>Genres:</strong> <span id="modalGenres"></span></li>
+            <li><strong>Release:</strong> <span id="modalRelease"></span></li>
+          </ul>
+          <a id="modalLink" class="btn secondary" target="_blank" rel="noopener">Open on Telegram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <small>Created by Movie Haunt</small>
+    </div>
+    <div class="footer-right">
+      <a href="https://t.me/MovieHaunters" target="_blank" rel="noopener">Visit our Telegram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
