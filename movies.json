@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Haunted Laughs",
+    "poster": "images/haunted_laughs.jpg",
+    "genres": ["Horror", "Comedy", "2025"],
+    "rating": "7.8",
+    "releaseDate": "2025-02-14",
+    "description": "A spooky yet hilarious ride with ghosts.",
+    "telegramLink": "https://t.me/moviehaunt/1"
+  },
+  {
+    "title": "Son of sardar",
+    "poster": "images/shadow_chase.jpg",
+    "genres": ["comedy", "Thriller"],
+    "rating": "8.2",
+    "releaseDate": "2025-11-02",
+    "description": "An unstoppable chase through the dark alleys.",
+    "telegramLink": "https://t.me/MovieHaunters/141"
+  },
+  {
+    "title": "Laugh Riot",
+    "poster": "images/laugh_riot.jpg",
+    "genres": ["Comedy"],
+    "rating": "6.9",
+    "releaseDate": "2023-08-12",
+    "description": "A night of non-stop comedy.",
+    "telegramLink": "https://t.me/moviehaunt/3"
+  },
+  {
+    "title": "Future Skies",
+    "poster": "images/future_skies.jpg",
+    "genres": ["Sci-Fi", "Action", "2025"],
+    "rating": "8.0",
+    "releaseDate": "2025-05-01",
+    "description": "A futuristic adventure beyond the stars.",
+    "telegramLink": "https://t.me/moviehaunt/4"
+  }
+]
