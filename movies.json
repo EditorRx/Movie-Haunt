@@ -21,4 +21,92 @@
     "description": "Hiranyakashyap challenged Vishnu; Narsimha wins..",
     "telegramLink": "https://t.me/MovieHaunters/93"
   },
+    {
+    "title": "Saiyaara",
+    "poster": "images/saiyaara.jpg",
+    "genres": ["Romance", "2025"],
+    "rating": "6.6",
+    "Length": "2h 30m",
+    "releaseDate": "2025-07-18",
+    "description": "Passionate lovers face highs and lows.",
+    "telegramLink": "https://t.me/MovieHaunters/100"
+}, 
+   {
+    "title": "Superman 2025",
+    "poster": "images/8.jpg",
+    "genres": ["Action", "Sci-Fi", "2025"],
+    "rating": "7.5/10",
+    "Length": "2h 10m",
+    "Language": "Hindi dubbed",
+    "releaseDate": "2025-07-11",
+    "description": "Superman battles foes at home and abroad.",
+    "telegramLink": "https://t.me/MovieHaunters/135"
+}, 
+  {
+    "title": "Son of Sardar 2",
+    "poster": "images/8.jpg",
+    "genres": ["Comedy"],
+    "rating": "6.9",
+    "Length": "2h 35m",
+    "Language": "Hindi",
+    "releaseDate": "2025-08-01",
+    "description": "Kids hunt golden mango, learn unity.",
+    "telegramLink": "https://t.me/MovieHaunters/141"
+},
+  {
+    "title": "Hereditary",
+    "poster": "images/8.jpg",
+    "genres": ["Horror"],
+    "rating": "7.3",
+    "Length": "2h 7m",
+    "Language": "Hindi dubbed",
+    "releaseDate": "2018-06-08",
+    "description": "Family uncovers terrifying ancestral secrets.",
+    "telegramLink": "https://t.me/MovieHaunters/32"
+},
+   {
+    "title": "Final Destination Bloodline",
+    "poster": "images/8.jpg",
+    "genres": ["Mystery"],
+    "rating": "6.8",
+    "Length": "1h 50m",
+    "Language": "Hindi dubbed",
+    "releaseDate": "2025-05-16",
+    "description": "Student fights nightmare to save family.",
+    "telegramLink": "https://t.me/MovieHaunters/42"
+},
+  {
+    "title": "Deadpool and Wolverine",
+    "poster": "images/8.jpg",
+    "genres": ["Action", "Comedy"],
+    "rating": "7.5",
+    "Length": "2h 8m",
+    "Language": "Hindi dubbed",
+    "releaseDate": "2024-07-25",
+    "description": "Deadpool and Wolverine unite to save multiverse.",
+    "telegramLink": "https://t.me/MovieHaunters/130"
+},
+  {
+    "title": "Interstellar",
+    "poster": "images/8.jpg",
+    "genres": ["Sci-Fi", "Adventure"],
+    "rating": "8.7",
+    "Length": "2h 49m",
+    "Language": "Hindi dubbed",
+    "releaseDate": "2014-11-07",
+    "description": "Pilot seeks new home for humanity.",
+    "telegramLink": "https://t.me/MovieHaunters/111"
+},
+{
+    "title": "Grafted",
+    "poster": "images/8.jpg",
+    "genres": ["Horror"],
+    "rating": "5.6",
+    "Length": "1h 35m",
+    "Language": "Hindi dubbed",
+    "releaseDate": "2024-08",
+    "description": "Exchange student chases fleeting popularity.",
+    "telegramLink": "https://t.me/MovieHaunters/122"
+}
+  
 ]
