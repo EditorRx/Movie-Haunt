@@ -50,9 +50,9 @@ body {
 }
 /* Marquee */
 .marquee-wrap{overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.04);background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
-.marquee{display:flex;gap:40px;animation:scroll 11s linear infinite;padding:10px 0}
-.marquee span{font-weight:700;font-size:1.05rem;letter-spacing:1px;background:linear-gradient(90deg,#ff96c5,#ffd86b,#00e0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-33%)}}
+.marquee{display:flex;gap:35px;animation:scroll 11s linear infinite;padding:10px 0}
+.marquee span{font-weight:700;font-size:1rem;letter-spacing:1px;background:linear-gradient(90deg,#ff96c5,#ffd86b,#00e0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-43%)}}
 
 /* Hero */
 .hero{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:20px auto;padding:20px;gap:16px}
