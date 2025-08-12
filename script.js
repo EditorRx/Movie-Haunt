@@ -19,6 +19,7 @@ const modallanguage = document.getElementById("modallanguage");
 const modallength = document.getElementById("modallength");
 const modalGenres = document.getElementById("modalGenres");
 const modalRelease = document.getElementById("modalRelease");
+const modaldescription = document.getElementById("modaldescription");
 const modalLink = document.getElementById("modalLink");
 document.getElementById("modalClose").addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
@@ -111,7 +112,7 @@ function renderGrid(container, list){
     const meta = document.createElement("div");
     meta.className = "meta";
     meta.innerText = `${movie.releaseDate || ""} • ${movie.rating || "—"}`;
-    meta.innerText = `${movie.language || "—"} • ${movie.length || "—"}`;
+    meta.innerText = `${movie.language || "—"} • ${movie.length || "—"} • ${movie.description || "—"}`;
     card.appendChild(img);
     card.appendChild(h3);
     card.appendChild(meta);
@@ -132,6 +133,7 @@ function openModal(movie){
   modallength.innerText = movie.length || "_"
   modalGenres.innerText = (movie.genres || []).join(", ") || "—";
   modalRelease.innerText = movie.releaseDate || "—";
+  modaldescription.innerText = movie.description || "—";
   modalLink.href = movie.telegramLink || "#";
   modal.style.display = "flex";
 }
