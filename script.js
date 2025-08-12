@@ -15,11 +15,11 @@ const modalPoster = document.getElementById("modalPoster");
 const modalTitle = document.getElementById("modalTitle");
 const modalDesc = document.getElementById("modalDesc");
 const modalRating = document.getElementById("modalRating");
-const modallanguage = document.getElementById("modallanguage");
-const modallength = document.getElementById("modallength");
+const modalLanguage = document.getElementById("modalLanguage");
+const modalLength = document.getElementById("modalLength");
 const modalGenres = document.getElementById("modalGenres");
 const modalRelease = document.getElementById("modalRelease");
-const modaldescription = document.getElementById("modaldescription");
+const modalOverview = document.getElementById("modalOverview");
 const modalLink = document.getElementById("modalLink");
 document.getElementById("modalClose").addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
@@ -111,8 +111,7 @@ function renderGrid(container, list){
     h3.innerText = movie.title;
     const meta = document.createElement("div");
     meta.className = "meta";
-    meta.innerText = `${movie.releaseDate || ""} • ${movie.rating || "—"}`;
-    meta.innerText = `${movie.language || "—"} • ${movie.length || "—"} • ${movie.description || "—"}`;
+    meta.innerText = `${movie.length || ""} • ${movie.rating || "—"}`;
     card.appendChild(img);
     card.appendChild(h3);
     card.appendChild(meta);
@@ -129,11 +128,10 @@ function openModal(movie){
   modalTitle.innerText = movie.title;
   modalDesc.innerText = movie.description || "No description available.";
   modalRating.innerText = movie.rating || "—";
-  modallanguage.innerText = movie.language || "_";
-  modallength.innerText = movie.length || "_"
+  modalLanguage.innerText = movie.language || "_";
+  modalLength.innerText = movie.length || "_"
   modalGenres.innerText = (movie.genres || []).join(", ") || "—";
   modalRelease.innerText = movie.releaseDate || "—";
-  modaldescription.innerText = movie.description || "—";
   modalLink.href = movie.telegramLink || "#";
   modal.style.display = "flex";
 }
