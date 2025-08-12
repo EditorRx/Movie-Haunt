@@ -1,13 +1,16 @@
 [
+
   {
-    "title": "Haunted Laughs",
-    "poster": "images/haunted_laughs.jpg",
-    "genres": ["Horror", "Comedy", "2025"],
-    "rating": "7.8",
-    "releaseDate": "2025-02-14",
-    "description": "A spooky yet hilarious ride with ghosts.",
-    "telegramLink": "https://t.me/moviehaunt/1"
-  },
+    "title": "Minecraft",
+    "poster": "images/minecraft.jpg",
+    "genres": ["Comedy", "Adventure", "2025"],
+    "rating": "5.6",
+    "Length": "1h 41m",
+    "Language": "Hindi dubbed",
+    "releaseDate": "2025-04-04",
+    "description": "Blocky adventure filled with laughs.",
+    "telegramLink": "https://t.me/MovieHaunters/20"
+},
   {
     "title": "Son of sardar",
     "poster": "images/shadow_chase.jpg",
