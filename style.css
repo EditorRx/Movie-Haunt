@@ -111,12 +111,12 @@ body {
     margin-right: 10px; /* Space between buttons */
 }
 .btn.primary {
-    background: var(--accent); /* Sky blue for Join Telegram */
-    color: #04101b;
+    background: #3bffde; /* Sky blue for Join Telegram */
+    color: #042923;
 }
 .btn.app-link {
-    background: #6a0dad; /*castle*/ /* Rich purple for Watch Movies Online */
-    color: #000000; /* Black text */
+    background: #eaed4a; /*castle*/ /* Rich purple for Watch Movies Online */
+    color: #282904; /* Black text */
     border: 2px solid transparent;
 }
 .btn.secondary {
