@@ -155,6 +155,19 @@ searchInput.addEventListener("input", () => {
     filterAndRender(filterLabel === "All" ? "" : filterLabel);
 });
 
+// Toggle for Latest 2025 section
+document.addEventListener("DOMContentLoaded", () => {
+    const latestHeader = document.getElementById("latestHeader");
+    const latestContent = document.getElementById("latestContent");
+
+    if (latestHeader && latestContent) {
+        latestHeader.addEventListener("click", () => {
+            latestHeader.classList.toggle("open");
+            latestContent.classList.toggle("open");
+        });
+    }
+});
+
 // helper: add movie (not required; you will edit movies.json instead)
 window.addMovie = function(movie) {
     movies.push(movie);
