@@ -48,7 +48,8 @@ body {
     text-shadow: 0 0 10px #a64dff, 0 0 0.5px #7a1fff; /* Glow effect */
     -webkit-text-stroke: 0.1px white; /* Thin white stroke */
 }
-* Marquee */
+
+/* Marquee */
 .marquee-wrap {
     overflow: hidden;
     border-bottom: 1px solid rgba(255,255,255,0.04);
