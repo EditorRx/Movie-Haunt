@@ -34,7 +34,7 @@
 }, 
    {
     "title": "Superman 2025",
-    "poster": "images/8.jpg",
+    "poster": "images/superman2025.jpg",
     "genres": ["Action", "Sci-Fi", "2025"],
     "rating": "7.5",
     "length": "2h 10m",
@@ -45,7 +45,7 @@
 }, 
   {
     "title": "Son of Sardar 2",
-    "poster": "images/8.jpg",
+    "poster": "images/sonofsardar2.png",
     "genres": ["Comedy"],
     "rating": "6.9",
     "length": "2h 35m",
@@ -56,7 +56,7 @@
 },
   {
     "title": "Hereditary",
-    "poster": "images/8.jpg",
+    "poster": "images/hereditary.jpg",
     "genres": ["Horror"],
     "rating": "7.3",
     "length": "2h 7m",
@@ -67,7 +67,7 @@
 },
    {
     "title": "Final Destination Bloodline",
-    "poster": "images/8.jpg",
+    "poster": "images/finalbloodline.jpg",
     "genres": ["Mystery"],
     "rating": "6.8",
     "length": "1h 50m",
@@ -78,7 +78,7 @@
 },
   {
     "title": "Deadpool and Wolverine",
-    "poster": "images/8.jpg",
+    "poster": "images/deadpool3.jpg",
     "genres": ["Action", "Comedy"],
     "rating": "7.5",
     "length": "2h 8m",
@@ -89,7 +89,7 @@
 },
   {
     "title": "Interstellar",
-    "poster": "images/8.jpg",
+    "poster": "images/interstellar.jpg",
     "genres": ["Sci-Fi", "Adventure"],
     "rating": "8.7",
     "length": "2h 49m",
@@ -100,7 +100,7 @@
 },
 {
     "title": "Grafted",
-    "poster": "images/8.jpg",
+    "poster": "images/grafted.jpg",
     "genres": ["Horror"],
     "rating": "5.6",
     "length": "1h 35m",
