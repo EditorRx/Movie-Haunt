@@ -89,6 +89,9 @@ body {
 
 /* Footer */
 .footer{max-width:1100px;margin:24px auto;padding:10px 20px;display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem}
+.footer-right a {
+    color: #b938ff; /* Blue color for the link */
+}
 
 /* Responsive */
 @media (max-width:720px){
