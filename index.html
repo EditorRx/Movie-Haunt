@@ -76,10 +76,15 @@
     <!-- JS injects genre buttons -->
   </nav>
 
-  <!-- Latest 2025 section -->
+  <!-- Latest 2025 section with toggle -->
   <section class="section">
-    <h2>Latest 2025</h2>
-    <div class="grid" id="latestGrid"></div>
+    <div id="latestHeader" class="toggle-header">
+      <h2>Click to see movies of 2025</h2>
+      <span class="toggle-arrow">▼</span>
+    </div>
+    <div id="latestContent" class="toggle-content">
+      <div class="grid" id="latestGrid"></div>
+    </div>
   </section>
 
   <!-- All movies -->
