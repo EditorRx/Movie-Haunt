@@ -2,7 +2,7 @@
   {
     "title": "Minecraft",
     "poster": "images/minecraft.jpg",
-    "genres": ["Comedy", "Adventure", "2025"],
+    "genres": ["Comedy", "Adventure"],
     "rating": "5.6",
     "length": "1h 41m",
     "language": "Hindi dubbed",
@@ -24,7 +24,7 @@
     {
     "title": "Saiyaara",
     "poster": "images/saiyaara.jpg",
-    "genres": ["Romance", "2025"],
+    "genres": ["Romance"],
     "rating": "6.6",
     "length": "2h 30m",
     "language": "Hindi",
@@ -39,7 +39,7 @@
     "rating": "8.0",
     "length": "Approx 60m each episode",
     "language": "Hindi dubbed",
-    "genres": ["Horror"],
+    "genres": ["Horror", "webseries"],
     "releaseDate": "2025-09-03",
     "type": "series",
     "episodeLinks": [
@@ -49,7 +49,7 @@
    {
     "title": "Superman 2025",
     "poster": "images/superman2025.jpg",
-    "genres": ["Action", "Sci-Fi", "2025"],
+    "genres": ["Action", "Sci-Fi"],
     "rating": "7.5",
     "length": "2h 10m",
     "language": "Hindi dubbed",
