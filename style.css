@@ -4,6 +4,7 @@
     --muted: #9aa0a6;
     --accent: #00e0ff;
     --glass: rgba(255,255,255,0.04);
+    --purple-glow: #a64dff; /* Light purple for glow */
 }
 
 /* Reset */
@@ -60,11 +61,11 @@ body {
 .marquee {
     display: inline-flex;
     white-space: nowrap;
-    animation: scroll 10s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 .marquee span {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.05rem;
     letter-spacing: 1px;
     background: linear-gradient(45deg, #ffd86b, #00e0ff);
     -webkit-background-clip: text;
@@ -201,6 +202,42 @@ body {
     font-size: 0.82rem;
     color: var(--muted);
     margin-top: 6px;
+}
+
+/* Toggle for Latest 2025 */
+.toggle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a2e; /* Dark rectangular box */
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--purple-glow), 0 0 20px rgba(166, 77, 255, 0.5); /* Light purple glow */
+    transition: box-shadow 0.3s ease;
+}
+.toggle-header:hover {
+    box-shadow: 0 0 15px var(--purple-glow), 0 0 25px rgba(166, 77, 255, 0.7); /* Stronger glow on hover */
+}
+.toggle-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.toggle-arrow {
+    font-size: 1.2rem;
+    color: var(--muted);
+    transition: transform 0.3s ease;
+}
+.toggle-header.open .toggle-arrow {
+    transform: rotate(180deg); /* Rotate arrow when open */
+}
+.toggle-content {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+}
+.toggle-content.open {
+    display: block; /* Show when toggled */
 }
 
 /* Modal */
