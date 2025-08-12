@@ -108,6 +108,67 @@
     "releaseDate": "2024-08",
     "description": "Exchange student chases fleeting popularity.",
     "telegramLink": "https://t.me/MovieHaunters/122"
-}
+},
+  {
+  "title": "Squid Game season 1",
+  "poster": "images/squid1.jpg",
+  "description": "deadly games test desperate player's lives.",
+  "rating": "8.3",
+  "length": "Approx 55m each episode",
+  "language": "Hindi dubbed",
+  "genres": ["Thriller"],
+  "releaseDate": "2021-09-17",
+  "type": "webseries",
+  "episodeLinks": [
+    "https://t.me/MovieHaunters/51",
+    "https://t.me/MovieHaunters/53",
+    "https://t.me/MovieHaunters/54",
+    "https://t.me/MovieHaunters/57",
+    "https://t.me/MovieHaunters/58",
+    "https://t.me/MovieHaunters/59",
+    "https://t.me/MovieHaunters/60",
+    "https://t.me/MovieHaunters/61",
+    "https://t.me/MovieHaunters/66"
+  ]
+  },
+  {
+  "title": "Squid Game season 2",
+  "poster": "images/squid2.jpg",
+  "description": "New deadly challenges test survivors limits.",
+  "rating": "8.0",
+  "length": "Approx 47m each episode",
+  "language": "Hindi dubbed",
+  "genres": ["Thriller"],
+  "releaseDate": "2024-12-26",
+  "type": "webseries",
+  "episodeLinks": [
+    "https://t.me/MovieHaunters/66",
+    "https://t.me/MovieHaunters/67",
+    "https://t.me/MovieHaunters/70",
+    "https://t.me/MovieHaunters/71",
+    "https://t.me/MovieHaunters/73",
+    "https://t.me/MovieHaunters/74",
+    "https://t.me/MovieHaunters/80"
+  ]
+  },
+    {
+  "title": "Squid Game season 3",
+  "poster": "images/squid3.jpg",
+  "description": "Continuation of season 2.",
+  "rating": "8.0",
+  "length": "Approx 47m each episode",
+  "language": "Hindi dubbed",
+  "genres": ["Thriller"],
+  "releaseDate": "2025-07-27",
+  "type": "webseries",
+  "episodeLinks": [
+    "https://t.me/MovieHaunters/81",
+    "https://t.me/MovieHaunters/84",
+    "https://t.me/MovieHaunters/87",
+    "https://t.me/MovieHaunters/88",
+    "https://t.me/MovieHaunters/89",
+    "https://t.me/MovieHaunters/90"
+  ]
+    }
   
 ]
