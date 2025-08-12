@@ -9,6 +9,7 @@ const latestGrid = document.getElementById("latestGrid");
 const genresWrap = document.getElementById("genres");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("modal");
+const episodesModal = document.getElementById("episodesModal");
 
 // modal elements
 const modalPoster = document.getElementById("modalPoster");
@@ -21,12 +22,23 @@ const modalGenres = document.getElementById("modalGenres");
 const modalRelease = document.getElementById("modalRelease");
 const modalLink = document.getElementById("modalLink");
 
+// Episodes modal elements
+const episodesTitle = document.getElementById("episodesTitle");
+const seriesName = document.getElementById("seriesName");
+const episodesList = document.getElementById("episodesList");
+
 if (!modal) {
     console.error("Modal element not found!");
+}
+if (!episodesModal) {
+    console.error("Episodes modal element not found!");
 }
 
 document.getElementById("modalClose").addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+
+document.getElementById("episodesModalClose").addEventListener("click", closeEpisodesModal);
+episodesModal.addEventListener("click", (e) => { if (e.target === episodesModal) closeEpisodesModal(); });
 
 fetch(MOVIES_JSON)
     .then(r => r.json())
@@ -139,13 +151,50 @@ function openModal(movie) {
     modalLength.innerText = movie.length || "_";
     modalGenres.innerText = (movie.genres || []).join(", ") || "—";
     modalRelease.innerText = movie.releaseDate || "—";
-    modalLink.href = movie.telegramLink || "#";
+    if (movie.type === "series") {
+        modalLink.innerText = "View Episodes";
+        modalLink.href = "#"; // Prevent default link behavior
+        modalLink.onclick = (e) => {
+            e.preventDefault();
+            openEpisodesModal(movie);
+        };
+    } else {
+        modalLink.innerText = "Open on Telegram";
+        modalLink.href = movie.telegramLink || "#";
+        modalLink.onclick = null; // Reset for movies
+    }
     modal.style.display = "flex";
     console.log("Modal opened for:", movie.title); // Debug log
 }
 
+function openEpisodesModal(series) {
+    if (!episodesModal) {
+        console.error("Episodes modal is not available!");
+        return;
+    }
+    seriesName.innerText = series.title || "Untitled Series";
+    episodesList.innerHTML = "";
+    // Assume series.episodeLinks is an array of URLs in movies.json
+    const episodeLinks = series.episodeLinks || [];
+    episodeLinks.forEach((link, index) => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.innerText = `Episode ${index + 1}`;
+        a.href = link || "#";
+        a.target = "_blank";
+        a.rel = "noopener";
+        li.appendChild(a);
+        episodesList.appendChild(li);
+    });
+    episodesModal.style.display = "flex";
+}
+
 function closeModal() {
     if (modal) modal.style.display = "none";
+}
+
+function closeEpisodesModal() {
+    if (episodesModal) episodesModal.style.display = "none";
 }
 
 // search input
