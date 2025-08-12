@@ -48,6 +48,34 @@ body {
     text-shadow: 0 0 10px #a64dff, 0 0 0.5px #7a1fff; /* Glow effect */
     -webkit-text-stroke: 0.1px white; /* Thin white stroke */
 }
+* Marquee */
+.marquee-wrap {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+.marquee {
+    display: flex;
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: scroll 10s linear infinite; /* Adjusted duration for smoother effect */
+}
+.marquee span {
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #ffd86b, #00e0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-right: 15vw; /* Ensures each span is spaced by the viewport width */
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(100vw); /* Start from the right edge of the viewport */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left, accounting for the full width of the marquee */
+    }
 
 /* Hero */
 .hero{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:20px auto;padding:20px;gap:16px}
