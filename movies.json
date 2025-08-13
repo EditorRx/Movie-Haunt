@@ -105,6 +105,21 @@
     "telegramLink": "https://t.me/MovieHaunters/130"
 },
   {
+    "title": "Lucifer Season 1",
+    "poster": "images/Lucifer1.jpg",
+    "description": "Devil solves crimes in Los Angeles.",
+    "rating": "8.1",
+    "length": "Approx 56m each episode",
+    "language": ["Hindi dubbed", "English"],
+    "genres": ["Drama", "webseries"],
+    "releaseDate": "2016-01-25",
+    "type": "series",
+    "episodeLinks": [
+        "https://editorrx.github.io/Coming-Soon/",
+      	"https://editorrx.github.io/Coming-Soon/"
+    ]
+  },
+  {
     "title": "Interstellar",
     "poster": "images/interstellar.jpg",
     "genres": ["Sci-Fi", "Adventure"],
