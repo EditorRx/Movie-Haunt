@@ -5,7 +5,7 @@
     "genres": ["Comedy", "Adventure"],
     "rating": "5.6",
     "length": "1h 41m",
-    "language": "Hindi dubbed",
+    "language": ["Hindi dubbed", "English"]
     "releaseDate": "2025-04-04",
     "description": "Blocky adventure filled with laughs.",
     "telegramLink": "https://t.me/MovieHaunters/20"
@@ -38,15 +38,15 @@
     "description": "Wednesday investigates dark academy mysteries (This is part 1).",
     "rating": "8.0",
     "length": "Approx 60m each episode",
-    "language": "Hindi dubbed",
+    "language": ["Hindi dubbed", "English" ]
     "genres": ["Horror", "webseries"],
     "releaseDate": "2025-09-03",
     "type": "series",
     "episodeLinks": [
         "https://t.me/MovieHaunters/158",
-        "https://pin.it/3KLx6IIpX",
-        "https://pin.it/3KLx6IIpX",
-        "https://pin.it/3KLx6IIpX"
+        "https://t.me/MovieHaunters/159",
+        "https://t.me/MovieHaunters/160",
+        "https://t.me/MovieHaunters/161"
     ]
   },
    {
@@ -55,7 +55,7 @@
     "genres": ["Action", "Sci-Fi"],
     "rating": "7.5",
     "length": "2h 10m",
-    "language": "Hindi dubbed",
+    "language": ["Hindi dubbed", "English"]
     "releaseDate": "2025-07-11",
     "description": "Superman battles foes at home and abroad.",
     "telegramLink": "https://t.me/MovieHaunters/135"
@@ -77,7 +77,7 @@
     "genres": ["Horror"],
     "rating": "7.3",
     "length": "2h 7m",
-    "language": "Hindi dubbed",
+    "language": ["Hindi dubbed", "English"]
     "releaseDate": "2018-06-08",
     "description": "Family uncovers terrifying ancestral secrets.",
     "telegramLink": "https://t.me/MovieHaunters/32"
@@ -88,7 +88,7 @@
     "genres": ["Mystery"],
     "rating": "6.8",
     "length": "1h 50m",
-    "language": "Hindi dubbed",
+    "language": ["Hindi dubbed", "English"],
     "releaseDate": "2025-05-16",
     "description": "Student fights nightmare to save family.",
     "telegramLink": "https://t.me/MovieHaunters/42"
@@ -99,7 +99,7 @@
     "genres": ["Action", "Comedy"],
     "rating": "7.5",
     "length": "2h 8m",
-    "language": "Hindi dubbed",
+    "language": ["Hindi dubbed", "English"],
     "releaseDate": "2024-07-25",
     "description": "Deadpool and Wolverine unite to save multiverse.",
     "telegramLink": "https://t.me/MovieHaunters/130"
@@ -110,7 +110,7 @@
     "genres": ["Sci-Fi", "Adventure"],
     "rating": "8.7",
     "length": "2h 49m",
-    "language": "Hindi dubbed",
+    "language": ["Hindi dubbed", "English"],
     "releaseDate": "2014-11-07",
     "description": "Pilot seeks new home for humanity.",
     "telegramLink": "https://t.me/MovieHaunters/111"
@@ -121,7 +121,7 @@
     "genres": ["Horror"],
     "rating": "5.6",
     "length": "1h 35m",
-    "language": "Hindi dubbed",
+    "language": ["Hindi dubbed", "English"]
     "releaseDate": "2024-08",
     "description": "Exchange student chases fleeting popularity.",
     "telegramLink": "https://t.me/MovieHaunters/122"
@@ -132,7 +132,7 @@
   "description": "deadly games test desperate player's lives.",
   "rating": "8.3",
   "length": "Approx 55m each episode",
-  "language": "Hindi dubbed",
+  "language": ["Hindi dubbed", "English"]
   "genres": ["Thriller", "webseries"],
   "releaseDate": "2021-09-17",
   "type": "series",
@@ -154,7 +154,7 @@
   "description": "New deadly challenges test survivors limits.",
   "rating": "8.0",
   "length": "Approx 47m each episode",
-  "language": "Hindi dubbed",
+  "language": ["Hindi dubbed", "English"]
   "genres": ["Thriller", "webseries"],
   "releaseDate": "2024-12-26",
   "type": "series",
@@ -174,7 +174,7 @@
   "description": "Continuation of season 2.",
   "rating": "8.0",
   "length": "Approx 47m each episode",
-  "language": "Hindi dubbed",
+  "language": ["Hindi dubbed", "English"]
   "genres": ["Thriller", "webseries"],
   "releaseDate": "2025-07-27",
   "type": "series",
