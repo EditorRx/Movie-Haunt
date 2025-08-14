@@ -158,6 +158,20 @@ body {
     box-shadow: 0 4px 18px rgba(0,224,255,0.08);
 }
 
+.counter-box {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+}
+.counter-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 10px;
+}
 /* Sections & grid */
 .section {
     max-width: 1100px;
