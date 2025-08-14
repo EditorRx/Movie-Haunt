@@ -9,217 +9,152 @@ const latestGrid = document.getElementById("latestGrid");
 const genresWrap = document.getElementById("genres");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("modal");
-const episodesModal = document.getElementById("episodesModal");
 
 // modal elements
 const modalPoster = document.getElementById("modalPoster");
 const modalTitle = document.getElementById("modalTitle");
 const modalDesc = document.getElementById("modalDesc");
 const modalRating = document.getElementById("modalRating");
-const modalLanguage = document.getElementById("modalLanguage");
-const modalLength = document.getElementById("modalLength");
 const modalGenres = document.getElementById("modalGenres");
 const modalRelease = document.getElementById("modalRelease");
 const modalLink = document.getElementById("modalLink");
-
-// Episodes modal elements
-const episodesTitle = document.getElementById("episodesTitle");
-const seriesName = document.getElementById("seriesName");
-const episodesList = document.getElementById("episodesList");
-
-if (!modal) {
-    console.error("Modal element not found!");
-}
-if (!episodesModal) {
-    console.error("Episodes modal element not found!");
-}
-
 document.getElementById("modalClose").addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
 
-document.getElementById("episodesModalClose").addEventListener("click", closeEpisodesModal);
-episodesModal.addEventListener("click", (e) => { if (e.target === episodesModal) closeEpisodesModal(); });
-
 fetch(MOVIES_JSON)
-    .then(r => r.json())
-    .then(data => {
-        movies = data;
-        buildGenreButtons();
-        renderAll();
-    })
-    .catch(err => {
-        console.error("Failed to load movies.json", err);
-        moviesGrid.innerHTML = "<p style='color:#f66'>Failed to load movie list.</p>";
-    });
-
-function buildGenreButtons() {
-    movies.forEach(m => (m.genres || []).forEach(g => genresSet.add(g)));
-    const allBtn = createGenreButton("All");
-    genresWrap.appendChild(allBtn);
-
-    Array.from(genresSet).sort().forEach(g => {
-        const btn = createGenreButton(g);
-        genresWrap.appendChild(btn);
-    });
-
-    // latest filter quick button (2025)
-    const latestBtn = createGenreButton("2025");
-    genresWrap.appendChild(latestBtn);
-}
-
-function createGenreButton(label) {
-    const btn = document.createElement("button");
-    btn.className = "genre-btn";
-    btn.innerText = label;
-    btn.onclick = () => {
-        Array.from(genresWrap.children).forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        filterAndRender(label === "All" ? "" : label);
-    };
-    return btn;
-}
-
-function filterAndRender(filter) {
-    const q = (searchInput.value || "").trim().toLowerCase();
-    const byFilter = movieMatchesFilter(filter);
-    const filtered = movies.filter(m => {
-        const matchesQuery = q === "" || (m.title + " " + (m.description || "") + " " + (m.genres || []).join(" ")).toLowerCase().includes(q);
-        return byFilter(m) && matchesQuery;
-    });
-    renderGrid(moviesGrid, filtered);
-    renderLatest(); // keep latest section synced
-}
-
-function movieMatchesFilter(filter) {
-    if (!filter || filter.trim() === "") return () => true;
-    return (m) => (m.genres || []).map(x => x.toLowerCase()).includes(filter.toLowerCase());
-}
-
-function renderAll() {
-    renderGrid(moviesGrid, movies);
-    renderLatest();
-}
-
-function renderLatest() {
-    const currentYear = new Date().getFullYear(); // Auto detect year
-    const latest = movies.filter(m => 
-        (m.genres || []).includes(String(currentYear)) || 
-        (m.releaseDate && m.releaseDate.startsWith(String(currentYear)))
-    );
-    renderGrid(latestGrid, latest.slice(0, 8)); 
-}
-
-function renderGrid(container, list) {
-    container.innerHTML = "";
-    if (list.length === 0) {
-        container.innerHTML = "<p style='color:var(--muted)'>No movies found.</p>";
-        return;
-    }
-    list.forEach(movie => {
-        const card = document.createElement("div");
-        card.className = "card";
-        const img = document.createElement("img");
-        img.src = movie.poster;
-        img.alt = movie.title;
-        img.loading = "lazy";
-        const h3 = document.createElement("h3");
-        h3.innerText = movie.title;
-        const meta = document.createElement("div");
-        meta.className = "meta";
-        meta.innerText = `${movie.length || ""} • ${movie.rating || "—"}`;
-        card.appendChild(img);
-        card.appendChild(h3);
-        card.appendChild(meta);
-
-        // click opens modal
-        card.addEventListener("click", () => openModal(movie));
-
-        container.appendChild(card);
-    });
-}
-
-function openModal(movie) {
-    if (!modal) {
-        console.error("Modal is not available!");
-        return;
-    }
-    modalPoster.src = movie.poster || "placeholder.jpg"; // Fallback image
-    modalTitle.innerText = movie.title || "Untitled";
-    modalDesc.innerText = movie.description || "No description available.";
-    modalRating.innerText = movie.rating || "—";
-    modalLanguage.innerText = movie.language || "_";
-    modalLength.innerText = movie.length || "_";
-    modalGenres.innerText = (movie.genres || []).join(", ") || "—";
-    modalRelease.innerText = movie.releaseDate || "—";
-    if (movie.type === "series") {
-        modalLink.innerText = "View Episodes";
-        modalLink.href = "#"; // Prevent default link behavior
-        modalLink.onclick = (e) => {
-            e.preventDefault();
-            openEpisodesModal(movie);
-        };
-    } else {
-        modalLink.innerText = "Open on Telegram";
-        modalLink.href = movie.telegramLink || "#";
-        modalLink.onclick = null; // Reset for movies
-    }
-    modal.style.display = "flex";
-    console.log("Modal opened for:", movie.title); // Debug log
-}
-
-function openEpisodesModal(series) {
-    if (!episodesModal) {
-        console.error("Episodes modal is not available!");
-        return;
-    }
-    seriesName.innerText = series.title || "Untitled Series";
-    episodesList.innerHTML = "";
-    // Assume series.episodeLinks is an array of URLs in movies.json
-    const episodeLinks = series.episodeLinks || [];
-    episodeLinks.forEach((link, index) => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.innerText = `Episode ${index + 1}`;
-        a.href = link || "#";
-        a.target = "_blank";
-        a.rel = "noopener";
-        li.appendChild(a);
-        episodesList.appendChild(li);
-    });
-    episodesModal.style.display = "flex";
-}
-
-function closeModal() {
-    if (modal) modal.style.display = "none";
-}
-
-function closeEpisodesModal() {
-    if (episodesModal) episodesModal.style.display = "none";
-}
-
-// search input
-searchInput.addEventListener("input", () => {
-    const active = Array.from(genresWrap.children).find(b => b.classList && b.classList.contains("active"));
-    const filterLabel = active ? active.innerText : "";
-    filterAndRender(filterLabel === "All" ? "" : filterLabel);
-});
-
-// Toggle for Latest 2025 section
-document.addEventListener("DOMContentLoaded", () => {
-    const latestHeader = document.getElementById("latestHeader");
-    const latestContent = document.getElementById("latestContent");
-
-    if (latestHeader && latestContent) {
-        latestHeader.addEventListener("click", () => {
-            latestHeader.classList.toggle("open");
-            latestContent.classList.toggle("open");
-        });
-    }
-});
-
-// helper: add movie (not required; you will edit movies.json instead)
-window.addMovie = function(movie) {
-    movies.push(movie);
+  .then(r => r.json())
+  .then(data => {
+    movies = data;
     buildGenreButtons();
     renderAll();
-};
+    updateCounters(); // ✅ Counter update after data load
+  })
+  .catch(err => {
+    console.error("Failed to load movies.json", err);
+    moviesGrid.innerHTML = "<p style='color:#f66'>Failed to load movie list.</p>";
+  });
+
+function buildGenreButtons(){
+  movies.forEach(m => (m.genres || []).forEach(g => genresSet.add(g)));
+  const allBtn = createGenreButton("All");
+  genresWrap.appendChild(allBtn);
+
+  Array.from(genresSet).sort().forEach(g => {
+    const btn = createGenreButton(g);
+    genresWrap.appendChild(btn);
+  });
+
+  // latest filter quick button (current year auto detect)
+  const latestBtn = createGenreButton(new Date().getFullYear().toString());
+  genresWrap.appendChild(latestBtn);
+}
+
+function createGenreButton(label){
+  const btn = document.createElement("button");
+  btn.className = "genre-btn";
+  btn.innerText = label;
+  btn.onclick = () => {
+    Array.from(genresWrap.children).forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    filterAndRender(label === "All" ? "" : label);
+  };
+  return btn;
+}
+
+function filterAndRender(filter){
+  const q = (searchInput.value || "").trim().toLowerCase();
+  const byFilter = movieMatchesFilter(filter);
+  const filtered = movies.filter(m => {
+    const matchesQuery = q === "" || (m.title + " " + (m.description || "") + " " + (m.genres||[]).join(" ")).toLowerCase().includes(q);
+    return byFilter(m) && matchesQuery;
+  });
+  renderGrid(moviesGrid, filtered);
+  renderLatest();
+  updateCounters(); // ✅ Update counter on filter
+}
+
+function movieMatchesFilter(filter){
+  if(!filter || filter.trim()==="") return () => true;
+  return (m) => (m.genres || []).map(x=>x.toLowerCase()).includes(filter.toLowerCase());
+}
+
+function renderAll(){
+  renderGrid(moviesGrid, movies);
+  renderLatest();
+}
+
+function renderLatest(){
+  const currentYear = new Date().getFullYear();
+  const latest = movies.filter(m => (m.genres||[]).includes(String(currentYear)) || (m.releaseDate && m.releaseDate.startsWith(String(currentYear))));
+  renderGrid(latestGrid, latest.slice(0,8));
+}
+
+function renderGrid(container, list){
+  container.innerHTML = "";
+  if(list.length === 0){
+    container.innerHTML = "<p style='color:var(--muted)'>No movies found.</p>";
+    return;
+  }
+  list.forEach(movie => {
+    const card = document.createElement("div");
+    card.className = "card";
+    const img = document.createElement("img");
+    img.src = movie.poster;
+    img.alt = movie.title;
+    img.loading = "lazy";
+    const h3 = document.createElement("h3");
+    h3.innerText = movie.title;
+    const meta = document.createElement("div");
+    meta.className = "meta";
+    meta.innerText = `${movie.releaseDate || ""} • ${movie.rating || "—"}`;
+    card.appendChild(img);
+    card.appendChild(h3);
+    card.appendChild(meta);
+
+    card.addEventListener("click", () => openModal(movie));
+
+    container.appendChild(card);
+  });
+}
+
+function openModal(movie){
+  modalPoster.src = movie.poster;
+  modalTitle.innerText = movie.title;
+  modalDesc.innerText = movie.description || "No description available.";
+  modalRating.innerText = movie.rating || "—";
+  modalGenres.innerText = (movie.genres || []).join(", ") || "—";
+  modalRelease.innerText = movie.releaseDate || "—";
+  modalLink.href = movie.telegramLink || "#";
+  modal.style.display = "flex";
+}
+
+function closeModal(){
+  modal.style.display = "none";
+}
+
+// Search input
+searchInput.addEventListener("input", () => {
+  const active = Array.from(genresWrap.children).find(b => b.classList && b.classList.contains("active"));
+  const filterLabel = active ? active.innerText : "";
+  filterAndRender(filterLabel === "All" ? "" : filterLabel);
+});
+
+// ✅ Movies + Webseries counter function
+function updateCounters() {
+  const movieCount = movies.filter(m => !m.type || m.type.toLowerCase() !== "series").length;
+  const webseriesCount = movies.filter(m => m.type && m.type.toLowerCase() === "series").length;
+
+  const movieCounterEl = document.getElementById("movieCount");
+  const webseriesCounterEl = document.getElementById("webseriesCount");
+
+  if (movieCounterEl) movieCounterEl.innerText = `Movies: ${movieCount}`;
+  if (webseriesCounterEl) webseriesCounterEl.innerText = `Webseries: ${webseriesCount}`;
+}
+
+// Helper: add movie manually (not required)
+window.addMovie = function(movie){
+  movies.push(movie);
+  buildGenreButtons();
+  renderAll();
+  updateCounters();
+}
