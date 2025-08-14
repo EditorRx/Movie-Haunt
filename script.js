@@ -4,39 +4,67 @@ const MOVIES_JSON = "movies.json";
 
 let movies = [];
 let genresSet = new Set();
-const moviesGrid = document.getElementById("moviesGrid");
-const latestGrid = document.getElementById("latestGrid");
-const genresWrap = document.getElementById("genres");
-const searchInput = document.getElementById("searchInput");
-const modal = document.getElementById("modal");
-const pagination = document.getElementById("pagination");
+
+const moviesGrid   = document.getElementById("moviesGrid");
+const latestGrid   = document.getElementById("latestGrid");
+const genresWrap   = document.getElementById("genres");
+const searchInput  = document.getElementById("searchInput");
+const modal        = document.getElementById("modal");
+const pagination   = document.getElementById("pagination");
 
 // modal elements
-const modalPoster = document.getElementById("modalPoster");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
-const modalRating = document.getElementById("modalRating");
-const modalGenres = document.getElementById("modalGenres");
+const modalPoster  = document.getElementById("modalPoster");
+const modalTitle   = document.getElementById("modalTitle");
+const modalDesc    = document.getElementById("modalDesc");
+const modalRating  = document.getElementById("modalRating");
+const modalLanguage= document.getElementById("modalLanguage");
+const modalLength  = document.getElementById("modalLength");
+const modalGenres  = document.getElementById("modalGenres");
 const modalRelease = document.getElementById("modalRelease");
-const modalLink = document.getElementById("modalLink");
+const modalLink    = document.getElementById("modalLink");
+
+// episodes modal elements
+const episodesModal      = document.getElementById("episodesModal");
+const episodesTitle      = document.getElementById("episodesTitle");
+const seriesName         = document.getElementById("seriesName");
+const episodesList       = document.getElementById("episodesList");
+const episodesModalClose = document.getElementById("episodesModalClose");
+
+// close buttons
 document.getElementById("modalClose").addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
 
+episodesModalClose.addEventListener("click", closeEpisodesModal);
+episodesModal.addEventListener("click", (e) => { if (e.target === episodesModal) closeEpisodesModal(); });
+
+// Latest toggle (header + content)
+const latestHeader  = document.getElementById("latestHeader");
+const latestContent = document.getElementById("latestContent");
+if (latestHeader && latestContent) {
+  latestHeader.addEventListener("click", () => {
+    latestHeader.classList.toggle("open");
+    latestContent.classList.toggle("open");
+  });
+}
+
+// Fetch data
 fetch(MOVIES_JSON)
   .then(r => r.json())
   .then(data => {
     movies = data;
     buildGenreButtons();
     renderAll();
-    updateCounters(); // ✅ Counter update after data load
+    updateCounters(); // total counts (movies vs webseries)
   })
   .catch(err => {
     console.error("Failed to load movies.json", err);
     moviesGrid.innerHTML = "<p style='color:#f66'>Failed to load movie list.</p>";
   });
 
-function buildGenreButtons(){
+// Build genre buttons
+function buildGenreButtons() {
   movies.forEach(m => (m.genres || []).forEach(g => genresSet.add(g)));
+
   const allBtn = createGenreButton("All");
   genresWrap.appendChild(allBtn);
 
@@ -45,12 +73,15 @@ function buildGenreButtons(){
     genresWrap.appendChild(btn);
   });
 
-  // latest filter quick button (current year auto detect)
-  const latestBtn = createGenreButton(new Date().getFullYear().toString());
-  genresWrap.appendChild(latestBtn);
+  // Optional: quick button for current year (kept as in your earlier code)
+  const yearBtn = createGenreButton(new Date().getFullYear().toString());
+  genresWrap.appendChild(yearBtn);
+
+  // Mark "All" active initially
+  allBtn.classList.add("active");
 }
 
-function createGenreButton(label){
+function createGenreButton(label) {
   const btn = document.createElement("button");
   btn.className = "genre-btn";
   btn.innerText = label;
@@ -65,51 +96,67 @@ function createGenreButton(label){
 let currentPage = 1;
 const itemsPerPage = 20;
 
-function filterAndRender(filter){
+function filterAndRender(filter) {
   const q = (searchInput.value || "").trim().toLowerCase();
   const byFilter = movieMatchesFilter(filter);
+
   const filtered = movies.filter(m => {
-    const matchesQuery = q === "" || (m.title + " " + (m.description || "") + " " + (m.genres||[]).join(" ")).toLowerCase().includes(q);
+    const haystack = (m.title + " " + (m.description || "") + " " + (m.genres || []).join(" ")).toLowerCase();
+    const matchesQuery = q === "" || haystack.includes(q);
     return byFilter(m) && matchesQuery;
   });
-  currentPage = 1; // Reset to first page on filter change
+
+  currentPage = 1; // reset on filter/search
   renderPaginatedGrid(filtered);
-  renderLatest();
-  updateCounters(); // ✅ Update counter on filter
+  renderLatest();  // keep latest section content in sync (always from full list)
 }
 
-function movieMatchesFilter(filter){
-  if(!filter || filter.trim()==="") return () => true;
-  return (m) => (m.genres || []).map(x=>x.toLowerCase()).includes(filter.toLowerCase());
+function movieMatchesFilter(filter) {
+  if (!filter || filter.trim() === "") return () => true;
+  return (m) => (m.genres || []).map(x => x.toLowerCase()).includes(filter.toLowerCase())
+           || (m.releaseDate && m.releaseDate.startsWith(filter)); // allows year button to work
 }
 
-function renderAll(){
+function renderAll() {
   currentPage = 1;
   renderPaginatedGrid(movies);
   renderLatest();
 }
 
-function renderLatest(){
-  const currentYear = new Date().getFullYear();
-  const latest = movies.filter(m => (m.genres||[]).includes(String(currentYear)) || (m.releaseDate && m.releaseDate.startsWith(String(currentYear))));
-  renderGrid(latestGrid, latest.slice(0,8));
+// Latest (current year) grid — top 8
+function renderLatest() {
+  const currentYear = new Date().getFullYear().toString();
+  const latest = movies.filter(m =>
+    (m.genres || []).includes(currentYear) ||
+    (m.releaseDate && m.releaseDate.startsWith(currentYear))
+  );
+  renderGrid(latestGrid, latest.slice(0, 8));
 }
 
 function renderPaginatedGrid(list) {
   pagination.innerHTML = "";
+
   if (list.length === 0) {
     moviesGrid.innerHTML = "<p style='color:var(--muted)'>No movies found.</p>";
-    return;
+    // Hide latest section if no results pages? keep it visible only on page 1 rule handled below
   }
 
-  const totalPages = Math.ceil(list.length / itemsPerPage);
+  const totalPages = Math.max(1, Math.ceil(list.length / itemsPerPage));
+  if (currentPage > totalPages) currentPage = totalPages;
+
   const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const paginatedList = list.slice(start, end);
+  const end   = start + itemsPerPage;
+  const pageItems = list.slice(start, end);
 
-  renderGrid(moviesGrid, paginatedList);
+  renderGrid(moviesGrid, pageItems);
 
-  // Render pagination controls
+  // Show latest section only on page 1
+  if (latestHeader) {
+    const latestSection = latestHeader.parentElement; // the <section> wrapping it
+    if (latestSection) latestSection.style.display = (currentPage === 1) ? "" : "none";
+  }
+
+  // Pagination controls
   const prevButton = createPageButton("Prev", () => {
     if (currentPage > 1) {
       currentPage--;
@@ -144,47 +191,95 @@ function createPageButton(label, onClick) {
   return btn;
 }
 
-function renderGrid(container, list){
+function renderGrid(container, list) {
   container.innerHTML = "";
-  if(list.length === 0){
+  if (list.length === 0) {
     container.innerHTML = "<p style='color:var(--muted)'>No movies found.</p>";
     return;
   }
   list.forEach(movie => {
     const card = document.createElement("div");
     card.className = "card";
+
     const img = document.createElement("img");
     img.src = movie.poster;
     img.alt = movie.title;
     img.loading = "lazy";
+
     const h3 = document.createElement("h3");
     h3.innerText = movie.title;
+
     const meta = document.createElement("div");
     meta.className = "meta";
+    // Using releaseDate • rating (as in your last code sample)
     meta.innerText = `${movie.releaseDate || ""} • ${movie.rating || "—"}`;
+
     card.appendChild(img);
     card.appendChild(h3);
     card.appendChild(meta);
 
+    // Click -> open details modal
     card.addEventListener("click", () => openModal(movie));
 
     container.appendChild(card);
   });
 }
 
-function openModal(movie){
-  modalPoster.src = movie.poster;
-  modalTitle.innerText = movie.title;
-  modalDesc.innerText = movie.description || "No description available.";
-  modalRating.innerText = movie.rating || "—";
-  modalGenres.innerText = (movie.genres || []).join(", ") || "—";
+function openModal(movie) {
+  modalPoster.src   = movie.poster || "placeholder.jpg";
+  modalTitle.innerText   = movie.title || "Untitled";
+  modalDesc.innerText    = movie.description || "No description available.";
+  modalRating.innerText  = movie.rating || "—";
+  modalGenres.innerText  = (movie.genres || []).join(", ") || "—";
   modalRelease.innerText = movie.releaseDate || "—";
-  modalLink.href = movie.telegramLink || "#";
+
+  const langText = Array.isArray(movie.language) ? movie.language.join(", ") : (movie.language || "");
+  modalLanguage.innerText = langText || "—";
+  modalLength.innerText   = movie.length || "—";
+
+  // If series -> "View Episodes", else "Open on Telegram"
+  if (movie.type && movie.type.toLowerCase() === "series") {
+    modalLink.innerText = "View Episodes";
+    modalLink.href = "#";
+    modalLink.onclick = (e) => {
+      e.preventDefault();
+      openEpisodesModal(movie);
+    };
+  } else {
+    modalLink.innerText = "Open on Telegram";
+    modalLink.href = movie.telegramLink || "#";
+    modalLink.onclick = null;
+  }
+
   modal.style.display = "flex";
 }
 
-function closeModal(){
+function closeModal() {
   modal.style.display = "none";
+}
+
+// Episodes modal
+function openEpisodesModal(series) {
+  seriesName.innerText = series.title || "Untitled Series";
+  episodesList.innerHTML = "";
+
+  const links = series.episodeLinks || [];
+  links.forEach((link, index) => {
+    const li = document.createElement("li");
+    const a  = document.createElement("a");
+    a.innerText = `Episode ${index + 1}`;
+    a.href = link || "#";
+    a.target = "_blank";
+    a.rel = "noopener";
+    li.appendChild(a);
+    episodesList.appendChild(li);
+  });
+
+  episodesModal.style.display = "flex";
+}
+
+function closeEpisodesModal() {
+  episodesModal.style.display = "none";
 }
 
 // Search input
@@ -194,35 +289,24 @@ searchInput.addEventListener("input", () => {
   filterAndRender(filterLabel === "All" ? "" : filterLabel);
 });
 
-// ✅ Movies + Webseries counter function
+// Movies + Webseries counters (total, auto from movies.json)
 function updateCounters() {
-  const movieCount = movies.filter(m => !m.type || m.type.toLowerCase() !== "series").length;
+  const movieCount     = movies.filter(m => !m.type || m.type.toLowerCase() !== "series").length;
   const webseriesCount = movies.filter(m => m.type && m.type.toLowerCase() === "series").length;
 
-  const movieCounterEl = document.getElementById("movieCount");
+  const movieCounterEl     = document.getElementById("movieCount");
   const webseriesCounterEl = document.getElementById("webseriesCount");
 
-  if (movieCounterEl) movieCounterEl.innerText = `Movies: ${movieCount}`;
+  if (movieCounterEl)     movieCounterEl.innerText     = `Movies: ${movieCount}`;
   if (webseriesCounterEl) webseriesCounterEl.innerText = `Webseries: ${webseriesCount}`;
 }
 
-// Helper: add movie manually (not required)
-window.addMovie = function(movie){
+// Helper to add a movie at runtime (optional)
+window.addMovie = function(movie) {
   movies.push(movie);
+  genresSet.clear();
+  genresWrap.innerHTML = "";
   buildGenreButtons();
   renderAll();
   updateCounters();
-}
-
-// ✅ Toggle for Latest 2025 section
-document.addEventListener("DOMContentLoaded", () => {
-    const latestHeader = document.getElementById("latestHeader");
-    const latestContent = document.getElementById("latestContent");
-
-    if (latestHeader && latestContent) {
-        latestHeader.addEventListener("click", () => {
-            latestHeader.classList.toggle("open");
-            latestContent.classList.toggle("open");
-        });
-    }
-});
+};
