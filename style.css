@@ -374,3 +374,33 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.page-btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: var(--glass);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.page-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.page-btn.active {
+    background: #bd59ff;
+    color: #000;
+    border-color: transparent;
+    box-shadow: 0 0 10px #bd59ff;
+    }
