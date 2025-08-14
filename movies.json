@@ -1,5 +1,27 @@
 [
   {
+    "title": "War 2",
+    "poster": "images/war2.jpg",
+    "genres": ["Action", "Thriller"],
+    "rating": "8.0",
+    "length": "2h 50m",
+    "language": "Hindi",
+    "releaseDate": "2025-08-14",
+    "description": "Agent hunts ex-ally accused of treason.",
+    "telegramLink": "https://editorrx.github.io/Coming-Soon/"
+  },
+  {
+    "title": "Udaipur Files",
+    "poster": "images/udaipurfiles.png",
+    "genres": ["True story"],
+    "rating": "6.8",
+    "length": "2h 05m",
+    "language": "Hindi",
+    "releaseDate": "2025-08-08",
+    "description": "Tailor’s life shattered by deadly conspiracy.",
+    "telegramLink": "https://editorrx.github.io/Coming-Soon/"
+  },
+  {
     "title": "Minecraft",
     "poster": "images/minecraft.jpg",
     "genres": ["Comedy", "Adventure"],
