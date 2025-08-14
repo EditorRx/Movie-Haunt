@@ -9,6 +9,7 @@ const latestGrid = document.getElementById("latestGrid");
 const genresWrap = document.getElementById("genres");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("modal");
+const pagination = document.getElementById("pagination");
 
 // modal elements
 const modalPoster = document.getElementById("modalPoster");
@@ -61,6 +62,9 @@ function createGenreButton(label){
   return btn;
 }
 
+let currentPage = 1;
+const itemsPerPage = 20;
+
 function filterAndRender(filter){
   const q = (searchInput.value || "").trim().toLowerCase();
   const byFilter = movieMatchesFilter(filter);
@@ -68,7 +72,8 @@ function filterAndRender(filter){
     const matchesQuery = q === "" || (m.title + " " + (m.description || "") + " " + (m.genres||[]).join(" ")).toLowerCase().includes(q);
     return byFilter(m) && matchesQuery;
   });
-  renderGrid(moviesGrid, filtered);
+  currentPage = 1; // Reset to first page on filter change
+  renderPaginatedGrid(filtered);
   renderLatest();
   updateCounters(); // ✅ Update counter on filter
 }
@@ -79,7 +84,8 @@ function movieMatchesFilter(filter){
 }
 
 function renderAll(){
-  renderGrid(moviesGrid, movies);
+  currentPage = 1;
+  renderPaginatedGrid(movies);
   renderLatest();
 }
 
@@ -87,6 +93,55 @@ function renderLatest(){
   const currentYear = new Date().getFullYear();
   const latest = movies.filter(m => (m.genres||[]).includes(String(currentYear)) || (m.releaseDate && m.releaseDate.startsWith(String(currentYear))));
   renderGrid(latestGrid, latest.slice(0,8));
+}
+
+function renderPaginatedGrid(list) {
+  pagination.innerHTML = "";
+  if (list.length === 0) {
+    moviesGrid.innerHTML = "<p style='color:var(--muted)'>No movies found.</p>";
+    return;
+  }
+
+  const totalPages = Math.ceil(list.length / itemsPerPage);
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedList = list.slice(start, end);
+
+  renderGrid(moviesGrid, paginatedList);
+
+  // Render pagination controls
+  const prevButton = createPageButton("Prev", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderPaginatedGrid(list);
+    }
+  });
+  pagination.appendChild(prevButton);
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageButton = createPageButton(i, () => {
+      currentPage = i;
+      renderPaginatedGrid(list);
+    });
+    if (i === currentPage) pageButton.classList.add("active");
+    pagination.appendChild(pageButton);
+  }
+
+  const nextButton = createPageButton("Next", () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderPaginatedGrid(list);
+    }
+  });
+  pagination.appendChild(nextButton);
+}
+
+function createPageButton(label, onClick) {
+  const btn = document.createElement("button");
+  btn.className = "page-btn";
+  btn.innerText = label;
+  btn.onclick = onClick;
+  return btn;
 }
 
 function renderGrid(container, list){
