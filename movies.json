@@ -19,7 +19,7 @@
     "language": "Hindi",
     "releaseDate": "2025-08-08",
     "description": "Tailor’s life shattered by deadly conspiracy.",
-    "telegramLink": "https://editorrx.github.io/Coming-Soon/"
+    "telegramLink": "https://t.me/MovieHaunters/172"
   },
   {
     "title": "Minecraft",
@@ -126,6 +126,20 @@
     "description": "Deadpool and Wolverine unite to save multiverse.",
     "telegramLink": "https://t.me/MovieHaunters/130"
 },
+  {
+    "title": "Lucifer Season 2",
+    "poster": "images/Lucifer2.jpg",
+    "description": "Devil solves crimes in Los Angeles. (18 episodes)",
+    "rating": "8.1",
+    "length": "Approx 45m each episode",
+    "language": ["Hindi dubbed", "English"],
+    "genres": ["Drama", "webseries"],
+    "releaseDate": "2016-09-19",
+    "type": "series",
+    "episodeLinks": [
+      	"https://editorrx.github.io/Coming-Soon/"
+    ]
+  },
   {
     "title": "Lucifer Season 1",
     "poster": "images/Lucifer1.jpg",
