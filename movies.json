@@ -127,6 +127,20 @@
     "telegramLink": "https://t.me/MovieHaunters/130"
 },
   {
+    "title": "Lucifer Season 3",
+    "poster": "images/Lucifer3.jpg",
+    "description": "Devil juggles love, crime, and destiny.(26 Episodes)",
+    "rating": "8.0",
+    "length": "Approx 55m each episode",
+    "language": "Hindi dubbed",
+    "genres": ["Drama" , "Webseries"],
+    "releaseDate": "2017-10-02",
+    "type": "series",
+    "episodeLinks": [
+        "https://editorrx.github.io/Coming-Soon/"
+    ]
+  },
+  {
     "title": "Lucifer Season 2",
     "poster": "images/Lucifer2.jpg",
     "description": "Devil solves crimes in Los Angeles. (18 episodes)",
