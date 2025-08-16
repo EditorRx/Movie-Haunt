@@ -4,7 +4,7 @@
     --muted: #9aa0a6;
     --accent: #00e0ff;
     --glass: rgba(255,255,255,0.04);
-    --purple-glow: #a64dff; /* Light purple for glow */
+    --purple-glow: #a64dff;
 }
 
 /* Reset */
@@ -18,7 +18,7 @@ body {
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite;
     color: #fff;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 @keyframes gradientMove {
@@ -71,14 +71,14 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding-right: 50px; /* Space between spans */
+    padding-right: 50px;
 }
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%); /* Move by half the content width due to duplication */
+        transform: translateX(-50%);
     }
 }
 
@@ -108,21 +108,32 @@ body {
     text-decoration: none;
     font-weight: 600;
     border: 2px solid transparent;
-    margin-right: 10px; /* Space between buttons */
+    margin-right: 10px;
 }
 .btn.primary {
-    background: #3bffde; /* Sky blue for Join Telegram */
+    background: #3bffde;
     color: #042923;
 }
 .btn.app-link {
-    background: #eaed4a; /*castle*/ /* Rich purple for Watch Movies Online */
-    color: #282904; /* Black text */
+    background: #eaed4a;
+    color: #282904;
     border: 2px solid transparent;
 }
 .btn.secondary {
     background: transparent;
     border-color: var(--accent);
     color: var(--accent);
+}
+.btn.watch-online {
+    background: #bffa5f;
+    color: #1a1a1a;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(191, 250, 95, 0.5);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.btn.watch-online:hover {
+    background: #a8e04d;
+    box-shadow: 0 0 15px rgba(191, 250, 95, 0.7);
 }
 #searchInput {
     padding: 10px 12px;
@@ -229,15 +240,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1a1a2e; /* Dark rectangular box */
+    background: #1a1a2e;
     padding: 10px 15px;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 0 10px var(--purple-glow), 0 0 20px rgba(166, 77, 255, 0.5); /* Light purple glow */
+    box-shadow: 0 0 10px var(--purple-glow), 0 0 20px rgba(166, 77, 255, 0.5);
     transition: box-shadow 0.3s ease;
 }
 .toggle-header:hover {
-    box-shadow: 0 0 15px var(--purple-glow), 0 0 25px rgba(166, 77, 255, 0.7); /* Stronger glow on hover */
+    box-shadow: 0 0 15px var(--purple-glow), 0 0 25px rgba(166, 77, 255, 0.7);
 }
 .toggle-header h2 {
     margin: 0;
@@ -250,14 +261,14 @@ body {
     transition: transform 0.3s ease;
 }
 .toggle-header.open .toggle-arrow {
-    transform: rotate(180deg); /* Rotate arrow when open */
+    transform: rotate(180deg);
 }
 .toggle-content {
-    display: none; /* Initially hidden */
+    display: none;
     margin-top: 10px;
 }
 .toggle-content.open {
-    display: block; /* Show when toggled */
+    display: block;
 }
 
 /* Modal (Main) */
@@ -268,7 +279,7 @@ body {
     align-items: center;
     justify-content: center;
     background: rgba(0,0,0,0.6);
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000;
     padding: 20px;
 }
 .modal-inner {
@@ -277,7 +288,7 @@ body {
     padding: 16px;
     max-width: 900px;
     width: 100%;
-    position: relative; /* Ensure proper positioning */
+    position: relative;
 }
 .modal-body {
     display: flex;
@@ -300,6 +311,11 @@ body {
     margin: 8px 0 16px 0;
     color: var(--muted);
 }
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 .modal-close {
     background: transparent;
     border: 0;
@@ -314,7 +330,7 @@ body {
 
 /* Episodes Modal */
 .episodes-modal .modal-inner {
-    border: 2px solid #9e54e3; /* Border color for new episodes modal */
+    border: 2px solid #9e54e3;
 }
 .episodes-list {
     list-style: none;
@@ -325,8 +341,8 @@ body {
     margin-bottom: 10px;
 }
 .episodes-list a {
-    color: #ffff00; /* Yellow color */
-    font-weight: 600; /* Slightly bold */
+    color: #ffff00;
+    font-weight: 600;
     text-decoration: none;
 }
 .episodes-list a:hover {
@@ -357,9 +373,9 @@ body {
         align-items: flex-start;
     }
     .hero-left .btn {
-        margin-right: 0; /* Remove margin on mobile for stacking */
-        margin-bottom: 10px; /* Add space between stacked buttons */
-        display: block; /* Stack buttons */
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: block;
     }
     .modal-body {
         flex-direction: column;
@@ -403,4 +419,4 @@ body {
     color: #000;
     border-color: transparent;
     box-shadow: 0 0 10px #bd59ff;
-    }
+}
