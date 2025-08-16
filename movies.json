@@ -41,7 +41,10 @@
     "language": ["Hindi dubbed", "English"],
     "releaseDate": "2025-04-04",
     "description": "Blocky adventure filled with laughs.",
-    "telegramLink": "https://t.me/MovieHaunters/20"
+    "telegramLink": [
+                    "https://t.me/MovieHaunters/20",
+                    "https://editorrx.github.io/Coming-Soon/"
+    ]
 },
   {
     "title": "Mahavatar Narshima",
@@ -148,6 +151,8 @@
     "releaseDate": "2017-10-02",
     "type": "series",
     "episodeLinks": [
+        "https://editorrx.github.io/Coming-Soon/",
+        "https://hubstream.art/#6hfhr1",
         "https://editorrx.github.io/Coming-Soon/"
     ]
   },
