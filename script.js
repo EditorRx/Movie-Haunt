@@ -246,7 +246,7 @@ function openModal(movie) {
     // Comment out the next line if you want "Watch Online" to appear for series
     modalWatchOnline.style.display = "none"; // Hide for series
   } else {
-    modalLink.innerText = "Open on Telegram";
+    modalLink.innerText = "Download";
     modalLink.href = movie.telegramLink || "#";
     modalLink.onclick = null;
     modalWatchOnline.style.display = "inline-block"; // Show for movies
