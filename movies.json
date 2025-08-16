@@ -8,7 +8,8 @@
     "language": "Hindi",
     "releaseDate": "2025-08-14",
     "description": "Ex-smuggler revives gang with stolen tech.",
-    "telegramLink": "https://t.me/MovieHaunters/190"
+    "telegramLink": "https://t.me/MovieHaunters/190",
+    "watchLink": "_"
   },
   {
     "title": "War 2",
@@ -19,7 +20,8 @@
     "language": "Hindi",
     "releaseDate": "2025-08-14",
     "description": "Agent hunts ex-ally accused of treason.",
-    "telegramLink": "https://t.me/MovieHaunters/168"
+    "telegramLink": "https://t.me/MovieHaunters/168",
+    "watchLink": "_"
   },
   {
     "title": "Udaipur Files",
@@ -30,7 +32,8 @@
     "language": "Hindi",
     "releaseDate": "2025-08-08",
     "description": "Tailor’s life shattered by deadly conspiracy.",
-    "telegramLink": "https://t.me/MovieHaunters/172"
+    "telegramLink": "https://t.me/MovieHaunters/172",
+    "watchLink": "_"
   },
   {
     "title": "Minecraft",
@@ -42,10 +45,11 @@
     "releaseDate": "2025-04-04",
     "description": "Blocky adventure filled with laughs.",
     "telegramLink": [
-                    "https://t.me/MovieHaunters/20",
-                    "https://editorrx.github.io/Coming-Soon/"
-    ]
-},
+      "https://t.me/MovieHaunters/20",
+      "https://editorrx.github.io/Coming-Soon/"
+    ],
+    "watchLink": "_"
+  },
   {
     "title": "Mahavatar Narshima",
     "poster": "images/mahavatarnarshima.jpg",
@@ -55,9 +59,10 @@
     "language": "Hindi",
     "releaseDate": "2025-07-25",
     "description": "Hiranyakashyap challenged Vishnu; Narsimha wins..",
-    "telegramLink": "https://t.me/MovieHaunters/93"
+    "telegramLink": "https://t.me/MovieHaunters/93",
+    "watchLink": "_"
   },
-    {
+  {
     "title": "Saiyaara",
     "poster": "images/saiyaara.jpg",
     "genres": ["Romance"],
@@ -66,8 +71,9 @@
     "language": "Hindi",
     "releaseDate": "2025-07-18",
     "description": "Passionate lovers face highs and lows.",
-    "telegramLink": "https://t.me/MovieHaunters/100"
-}, 
+    "telegramLink": "https://t.me/MovieHaunters/100",
+    "watchLink": "_"
+  },
   {
     "title": "Wednesday Season 2",
     "poster": "images/wednesday2.jpg",
@@ -79,13 +85,13 @@
     "releaseDate": "2025-09-03",
     "type": "series",
     "episodeLinks": [
-        "https://t.me/MovieHaunters/158",
-        "https://t.me/MovieHaunters/159",
-        "https://t.me/MovieHaunters/160",
-        "https://t.me/MovieHaunters/161"
+      "https://t.me/MovieHaunters/158",
+      "https://t.me/MovieHaunters/159",
+      "https://t.me/MovieHaunters/160",
+      "https://t.me/MovieHaunters/161"
     ]
   },
-   {
+  {
     "title": "Superman 2025",
     "poster": "images/superman2025.jpg",
     "genres": ["Action", "Sci-Fi"],
@@ -94,8 +100,9 @@
     "language": ["Hindi dubbed", "English"],
     "releaseDate": "2025-07-11",
     "description": "Superman battles foes at home and abroad.",
-    "telegramLink": "https://t.me/MovieHaunters/135"
-}, 
+    "telegramLink": "https://t.me/MovieHaunters/135",
+    "watchLink": "_"
+  },
   {
     "title": "Son of Sardar 2",
     "poster": "images/sonofsardar2.png",
@@ -105,8 +112,9 @@
     "language": "Hindi",
     "releaseDate": "2025-08-01",
     "description": "Kids hunt golden mango, learn unity.",
-    "telegramLink": "https://t.me/MovieHaunters/141"
-},
+    "telegramLink": "https://t.me/MovieHaunters/141",
+    "watchLink": "_"
+  },
   {
     "title": "Hereditary",
     "poster": "images/hereditary.jpg",
@@ -116,9 +124,10 @@
     "language": ["Hindi dubbed", "English"],
     "releaseDate": "2018-06-08",
     "description": "Family uncovers terrifying ancestral secrets.",
-    "telegramLink": "https://t.me/MovieHaunters/32"
-},
-   {
+    "telegramLink": "https://t.me/MovieHaunters/32",
+    "watchLink": "_"
+  },
+  {
     "title": "Final Destination Bloodline",
     "poster": "images/finalbloodline.jpg",
     "genres": ["Mystery"],
@@ -127,8 +136,9 @@
     "language": ["Hindi dubbed", "English"],
     "releaseDate": "2025-05-16",
     "description": "Student fights nightmare to save family.",
-    "telegramLink": "https://t.me/MovieHaunters/42"
-},
+    "telegramLink": "https://t.me/MovieHaunters/42",
+    "watchLink": "_"
+  },
   {
     "title": "Deadpool & Wolverine",
     "poster": "images/deadpool3.jpg",
@@ -138,8 +148,9 @@
     "language": ["Hindi dubbed", "English"],
     "releaseDate": "2024-07-25",
     "description": "Deadpool and Wolverine unite to save multiverse.",
-    "telegramLink": "https://t.me/MovieHaunters/130"
-},
+    "telegramLink": "https://t.me/MovieHaunters/130",
+    "watchLink": "_"
+  },
   {
     "title": "Lucifer Season 3",
     "poster": "images/Lucifer3.jpg",
@@ -151,9 +162,9 @@
     "releaseDate": "2017-10-02",
     "type": "series",
     "episodeLinks": [
-        "https://editorrx.github.io/Coming-Soon/",
-        "https://hubstream.art/#6hfhr1",
-        "https://editorrx.github.io/Coming-Soon/"
+      "https://editorrx.github.io/Coming-Soon/",
+      "https://hubstream.art/#6hfhr1",
+      "https://editorrx.github.io/Coming-Soon/"
     ]
   },
   {
@@ -167,24 +178,24 @@
     "releaseDate": "2016-09-19",
     "type": "series",
     "episodeLinks": [
-      	"https://hubstream.art/#5wntr6",
-        "https://hubstream.art/#q3kj9z",
-        "https://hubstream.art/#x6abvo",
-        "https://hubstream.art/#hlbey9",
-        "https://hubstream.art/#c5o8uw",
-        "https://hubstream.art/#lugpmu",
-        "https://hubstream.art/#n8lrp5",
-        "https://hubstream.art/#onhuhn",
-        "https://hubstream.art/#x6abad",
-        "https://hubstream.art/#urekit",
-        "https://hubstream.art/#onhuer",
-        "https://hubstream.art/#8tuqug",
-        "https://hubstream.art/#9o6lms",
-        "https://hubstream.art/#6h1gzk",
-        "https://hubstream.art/#miwxau",
-        "https://hubstream.art/#8tuqkm",
-        "https://hubstream.art/#pkmsmv",
-        "https://hubstream.art/#gezmw8"
+      "https://hubstream.art/#5wntr6",
+      "https://hubstream.art/#q3kj9z",
+      "https://hubstream.art/#x6abvo",
+      "https://hubstream.art/#hlbey9",
+      "https://hubstream.art/#c5o8uw",
+      "https://hubstream.art/#lugpmu",
+      "https://hubstream.art/#n8lrp5",
+      "https://hubstream.art/#onhuhn",
+      "https://hubstream.art/#x6abad",
+      "https://hubstream.art/#urekit",
+      "https://hubstream.art/#onhuer",
+      "https://hubstream.art/#8tuqug",
+      "https://hubstream.art/#9o6lms",
+      "https://hubstream.art/#6h1gzk",
+      "https://hubstream.art/#miwxau",
+      "https://hubstream.art/#8tuqkm",
+      "https://hubstream.art/#pkmsmv",
+      "https://hubstream.art/#gezmw8"
     ]
   },
   {
@@ -198,20 +209,20 @@
     "releaseDate": "2016-01-25",
     "type": "series",
     "episodeLinks": [
-        "https://t.me/MovieHaunters/164",
-      	"https://t.me/MovieHaunters/173",
-        "https://t.me/MovieHaunters/174",
-        "https://t.me/MovieHaunters/175",
-        "https://t.me/MovieHaunters/176",
-        "https://hubstream.art/#s9xuvt",
-        "https://t.me/MovieHaunters/179",
+      "https://t.me/MovieHaunters/164",
+      "https://t.me/MovieHaunters/173",
+      "https://t.me/MovieHaunters/174",
+      "https://t.me/MovieHaunters/175",
+      "https://t.me/MovieHaunters/176",
+      "https://hubstream.art/#s9xuvt",
+      "https://t.me/MovieHaunters/179",
       "https://hubstream.art/#bgvij6",
       "https://editorrx.github.io/Not-available-/",
       "https://hubstream.art/#rqpcx1",
       "https://t.me/MovieHaunters/181",
       "https://t.me/MovieHaunters/182",
       "https://t.me/MovieHaunters/183"
-     ]
+    ]
   },
   {
     "title": "Interstellar",
@@ -222,9 +233,10 @@
     "language": ["Hindi dubbed", "English"],
     "releaseDate": "2014-11-07",
     "description": "Pilot seeks new home for humanity.",
-    "telegramLink": "https://t.me/MovieHaunters/111"
-},
-{
+    "telegramLink": "https://t.me/MovieHaunters/111",
+    "watchLink": "_"
+  },
+  {
     "title": "Grafted",
     "poster": "images/grafted.jpg",
     "genres": ["Horror"],
@@ -233,68 +245,68 @@
     "language": ["Hindi dubbed", "English"],
     "releaseDate": "2024-08",
     "description": "Exchange student chases fleeting popularity.",
-    "telegramLink": "https://t.me/MovieHaunters/122"
-},
-  {
-  "title": "Squid Game season 1",
-  "poster": "images/squid1.jpg",
-  "description": "deadly games test desperate player's lives.",
-  "rating": "8.3",
-  "length": "Approx 55m each episode",
-  "language": ["Hindi dubbed", "English"],
-  "genres": ["Thriller", "webseries"],
-  "releaseDate": "2021-09-17",
-  "type": "series",
-  "episodeLinks": [
-    "https://t.me/MovieHaunters/51",
-    "https://t.me/MovieHaunters/53",
-    "https://t.me/MovieHaunters/54",
-    "https://t.me/MovieHaunters/57",
-    "https://t.me/MovieHaunters/58",
-    "https://t.me/MovieHaunters/59",
-    "https://t.me/MovieHaunters/60",
-    "https://t.me/MovieHaunters/61",
-    "https://t.me/MovieHaunters/66"
-  ]
+    "telegramLink": "https://t.me/MovieHaunters/122",
+    "watchLink": "_"
   },
   {
-  "title": "Squid Game season 2",
-  "poster": "images/squid2.jpg",
-  "description": "New deadly challenges test survivors limits.",
-  "rating": "8.0",
-  "length": "Approx 47m each episode",
-  "language": ["Hindi dubbed", "English"],
-  "genres": ["Thriller", "webseries"],
-  "releaseDate": "2024-12-26",
-  "type": "series",
-  "episodeLinks": [
-    "https://t.me/MovieHaunters/66",
-    "https://t.me/MovieHaunters/67",
-    "https://t.me/MovieHaunters/70",
-    "https://t.me/MovieHaunters/71",
-    "https://t.me/MovieHaunters/73",
-    "https://t.me/MovieHaunters/74",
-    "https://t.me/MovieHaunters/80"
-  ]
+    "title": "Squid Game season 1",
+    "poster": "images/squid1.jpg",
+    "description": "deadly games test desperate player's lives.",
+    "rating": "8.3",
+    "length": "Approx 55m each episode",
+    "language": ["Hindi dubbed", "English"],
+    "genres": ["Thriller", "webseries"],
+    "releaseDate": "2021-09-17",
+    "type": "series",
+    "episodeLinks": [
+      "https://t.me/MovieHaunters/51",
+      "https://t.me/MovieHaunters/53",
+      "https://t.me/MovieHaunters/54",
+      "https://t.me/MovieHaunters/57",
+      "https://t.me/MovieHaunters/58",
+      "https://t.me/MovieHaunters/59",
+      "https://t.me/MovieHaunters/60",
+      "https://t.me/MovieHaunters/61",
+      "https://t.me/MovieHaunters/66"
+    ]
   },
-    {
-  "title": "Squid Game season 3",
-  "poster": "images/squid3.jpg",
-  "description": "Continuation of season 2.",
-  "rating": "8.0",
-  "length": "Approx 47m each episode",
-  "language": ["Hindi dubbed", "English"],
-  "genres": ["Thriller", "webseries"],
-  "releaseDate": "2025-07-27",
-  "type": "series",
-  "episodeLinks": [
-    "https://t.me/MovieHaunters/81",
-    "https://t.me/MovieHaunters/84",
-    "https://t.me/MovieHaunters/87",
-    "https://t.me/MovieHaunters/88",
-    "https://t.me/MovieHaunters/89",
-    "https://t.me/MovieHaunters/90"
-  ]
-    }
-  
+  {
+    "title": "Squid Game season 2",
+    "poster": "images/squid2.jpg",
+    "description": "New deadly challenges test survivors limits.",
+    "rating": "8.0",
+    "length": "Approx 47m each episode",
+    "language": ["Hindi dubbed", "English"],
+    "genres": ["Thriller", "webseries"],
+    "releaseDate": "2024-12-26",
+    "type": "series",
+    "episodeLinks": [
+      "https://t.me/MovieHaunters/66",
+      "https://t.me/MovieHaunters/67",
+      "https://t.me/MovieHaunters/70",
+      "https://t.me/MovieHaunters/71",
+      "https://t.me/MovieHaunters/73",
+      "https://t.me/MovieHaunters/74",
+      "https://t.me/MovieHaunters/80"
+    ]
+  },
+  {
+    "title": "Squid Game season 3",
+    "poster": "images/squid3.jpg",
+    "description": "Continuation of season 2.",
+    "rating": "8.0",
+    "length": "Approx 47m each episode",
+    "language": ["Hindi dubbed", "English"],
+    "genres": ["Thriller", "webseries"],
+    "releaseDate": "2025-07-27",
+    "type": "series",
+    "episodeLinks": [
+      "https://t.me/MovieHaunters/81",
+      "https://t.me/MovieHaunters/84",
+      "https://t.me/MovieHaunters/87",
+      "https://t.me/MovieHaunters/88",
+      "https://t.me/MovieHaunters/89",
+      "https://t.me/MovieHaunters/90"
+    ]
+  }
 ]
