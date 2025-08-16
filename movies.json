@@ -1,5 +1,16 @@
 [
   {
+    "title": "Coolie 2025",
+    "poster": "images/Coolie2025.jpg",
+    "genres": ["Action", "Thriller"],
+    "rating": "6.5",
+    "length": "2h 50m",
+    "language": "Hindi",
+    "releaseDate": "2025-08-14",
+    "description": "Ex-smuggler revives gang with stolen tech.",
+    "telegramLink": "_"
+  },
+  {
     "title": "War 2",
     "poster": "images/war2.jpg",
     "genres": ["Action", "Thriller"],
