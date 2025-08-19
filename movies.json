@@ -1,17 +1,5 @@
 [
   {
-  "title": "Coming soon : pending",
-  "poster": "images/Surprise.jpg",
-  "genres": ["??"],
-  "rating": "??",
-  "length": "??",
-  "language": "Hindi",
-  "releaseDate": "????-??-??",
-  "description": "???",
-  "telegramLink": "https://editorrx.github.io/Coming-Soon/",
-  "watchLink": "https://editorrx.github.io/Coming-Soon/"
-  },
-  {
     "title": "Coolie 2025",
     "poster": "images/Coolie2025.jpg",
     "genres": ["Action", "Thriller"],
@@ -171,6 +159,18 @@
     "description": "Deadpool and Wolverine unite to save multiverse.",
     "telegramLink": "https://t.me/MovieHaunters/130",
     "watchLink": "https://hdstream4u.com/file/z23gk7i3ojcb"
+  },
+  {
+  "title": "Dil Bechara",
+  "poster": "images/Dil Bechara.jpg",
+  "genres": ["Romance"],
+  "rating": "8.3",
+  "length": "1h 41m",
+  "language": "Hindi",
+  "releaseDate": "2020-07-24",
+  "description": "Two lovers fight terminal illness.",
+  "telegramLink": "https://t.me/MovieHaunters/201",
+  "watchLink": "https://vegamovies.ly/4197-dil-bechara-2020-hindi-movie-720p-hdrip-x264-1-1gb.html"
   },
   {
     "title": "Lucifer Season 3",
