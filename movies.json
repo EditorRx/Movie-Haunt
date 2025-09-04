@@ -107,7 +107,7 @@
   {
     "title": "Superman 2025",
     "poster": "images/superman2025.jpg",
-    "genres": ["Action", "Sci-Fi"],
+    "genres": ["Superhero", "Action", "Sci-Fi"],
     "rating": "7.5",
     "length": "2h 10m",
     "language": ["Hindi dubbed", "English"],
@@ -127,6 +127,18 @@
   "description": "Sonny races for redemption glory.",
   "telegramLink": "https://t.me/MovieHaunters/204",
   "watchLink": "https://hubcdn.fans/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2mRw2V6BLLJGPVRN62sStCEakCwbNq746nuZy3udnRwyT9f-QJFzyIRPvrOIaSuQfrT50N3Lw1pizy3rReTeFDBBUMYh2kxYvfQbYuuTLd3whrQuJPsq6lepKSFHCZXWzai-czBIsvJP-rHEPy9OyjN3CtxHnhdHfTsuzPom6XUECVZsM7nySojjMncOxPhJR9GJeR7Nnhk2GnxBhnMNvk27YJo8EgphEGfquJFPPgonGiPbgU"
+  },
+  {
+  "title": "Thunderbolts*",
+  "poster": "images/Thunderbolts.jpg",
+  "genres": ["Superhero", "Action", "Drama"],
+  "rating": "7.2",
+  "length": "2h 6m",
+  "language": "English",
+  "releaseDate": "2025-05-02",
+  "description": "Anti-heroes unite to stop apocalypse",
+  "telegramLink": "_",
+  "watchLink": "https://vegamovies.shoes/43437-thunderbolts-2025-hindi-dual-audio-web-dl-720p-480p-1080p.html"
   },
   {
   "title": "Pushpa 2: The Rule – Reloaded Version",
@@ -174,7 +186,7 @@
   {
   "title": "Chhaava",
   "poster": "images/Chhaava.png",
-  "genres": ["History", "Best of 2025"],
+  "genres": ["Legend", "History", "Best of 2025"],
   "rating": "7.3",
   "length": "2h 41m",
   "language": "Hindi",
@@ -210,7 +222,7 @@
   {
   "title": "Venom 3: The Last Dance",
   "poster": "images/Venom3.jpg",
-  "genres": ["Action", "Sci-Fi"],
+  "genres": ["Superhero", "Action", "Sci-Fi"],
   "rating": "6.0",
   "length": "1h 50m",
   "language": "Hindi Dubbed",
@@ -258,7 +270,7 @@
   {
     "title": "Deadpool & Wolverine",
     "poster": "images/deadpool3.jpg",
-    "genres": ["Action", "Comedy"],
+    "genres": ["Superhero", "Action", "Comedy"],
     "rating": "7.5",
     "length": "2h 8m",
     "language": ["Hindi dubbed", "English"],
