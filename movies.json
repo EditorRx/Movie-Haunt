@@ -1,6 +1,6 @@
 [
   {
-  "title": "The Conjuring: Last Rites",
+  "title": "The Conjuring Last Rites",
   "poster": "images/ConjuringRites.jpg",
   "genres": ["Horror"],
   "rating": "6.6",
@@ -302,6 +302,29 @@
   "description": "Two lovers fight terminal illness.",
   "telegramLink": "https://t.me/MovieHaunters/201",
   "watchLink": "https://vegamovies.ly/4197-dil-bechara-2020-hindi-movie-720p-hdrip-x264-1-1gb.html"
+  },
+  {
+  "title": "Lucifer Season 4",
+  "poster": "images/Lucifer4.jpg",
+  "description": "Lucifer returns to Netflix with darker (10 Episodes)[Use VPN to watch online].",
+  "rating": "8.6",
+  "length": "Approx 50m each episode",
+  "language": ["Hindi dubbed", "English"],
+  "genres": ["Crime", "webseries"],
+  "releaseDate": "2019-05-08",
+  "type": "series",
+  "episodeLinks": [
+    {"episode": 1, "title": "Everything's Okay", "link": "_"},
+    {"episode": 2, "title": "Somebody's Been Reading Dante’s Inferno", "link": "_"},
+    {"episode": 3, "title": "O, Ye of Little Faith, Father", "link": "_"},
+    {"episode": 4, "title": "All About Eve", "link": "_"},
+    {"episode": 5, "title": "Expire Erect", "link": "_"},
+    {"episode": 6, "title": "Orgy Pants to Work", "link": "_"},
+    {"episode": 7, "title": "Devil Is as Devil Does", "link": "_"},
+    {"episode": 8, "title": "Super Bad Boyfriend", "link": "_"},
+    {"episode": 9, "title": "Save Lucifer", "link": "_"},
+    {"episode": 10, "title": "Who's da New King of Hell?", "link": "_"}
+  ]
   },
   {
     "title": "Lucifer Season 3",
