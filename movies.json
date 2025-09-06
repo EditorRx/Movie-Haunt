@@ -314,17 +314,9 @@
   "releaseDate": "2019-05-08",
   "type": "series",
   "episodeLinks": [
-    {"episode": 1, "title": "Everything's Okay", "link": "_"},
-    {"episode": 2, "title": "Somebody's Been Reading Dante’s Inferno", "link": "_"},
-    {"episode": 3, "title": "O, Ye of Little Faith, Father", "link": "_"},
-    {"episode": 4, "title": "All About Eve", "link": "_"},
-    {"episode": 5, "title": "Expire Erect", "link": "_"},
-    {"episode": 6, "title": "Orgy Pants to Work", "link": "_"},
-    {"episode": 7, "title": "Devil Is as Devil Does", "link": "_"},
-    {"episode": 8, "title": "Super Bad Boyfriend", "link": "_"},
-    {"episode": 9, "title": "Save Lucifer", "link": "_"},
-    {"episode": 10, "title": "Who's da New King of Hell?", "link": "_"}
-  ]
+      "https://editorrx.github.io/Coming-Soon/"
+    ]
+  },
   },
   {
     "title": "Lucifer Season 3",
