@@ -331,4 +331,4 @@ window.addMovie = function(movie) {
   buildGenreButtons();
   renderAll();
   updateCounters();
-};
+};  
