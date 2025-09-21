@@ -74,9 +74,9 @@
       <input id="searchInput" type="search" placeholder="Search movies, genre, year..." />
     </div>
     <div class="counter-wrap">
-    <div id="movieCount" class="counter-box">Movies: 0</div>
-    <div id="webseriesCount" class="counter-box">Webseries: 0</div>
-</div>
+      <div id="movieCount" class="counter-box">Movies: 0</div>
+      <div id="webseriesCount" class="counter-box">Webseries: 0</div>
+    </div>
   </header>
 
   <!-- Category buttons -->
@@ -84,14 +84,14 @@
     <!-- JS injects genre buttons -->
   </nav>
 
-  <!-- Latest 2025 section with toggle -->
+  <!-- Disclaimer section with toggle -->
   <section class="section">
     <div id="latestHeader" class="toggle-header">
-      <h2>Click This To Watch 2025 Movies</h2>
+      <h2>DISCLAIMER</h2>
       <span class="toggle-arrow">▼</span>
     </div>
     <div id="latestContent" class="toggle-content">
-      <div class="grid" id="latestGrid"></div>
+      <p id="disclaimerText">This website provides links to third-party content hosted on external servers. We do not host, upload, or distribute any media files. All content is sourced from public domains and is intended for informational purposes only. Users are responsible for complying with copyright laws and using a VPN for online viewing where required. Movie Haunt is not liable for any legal issues arising from the use of this site.</p>
     </div>
   </section>
 
@@ -118,8 +118,10 @@
             <li><strong>Genres:</strong> <span id="modalGenres"></span></li>
             <li><strong>Release:</strong> <span id="modalRelease"></span></li>
           </ul>
-          <a id="modalLink" class="btn secondary" target="_blank" rel="noopener">Download</a>
-           <a id="modalWatchOnline" class="btn watch-online" target="_blank" rel="noopener" aria-label="Watch this movie online via Castle app">Watch Online</a>
+          <div class="modal-buttons">
+            <a id="modalLink" class="btn secondary" target="_blank" rel="noopener">Download</a>
+            <a id="modalWatchOnline" class="btn watch-online" target="_blank" rel="noopener" aria-label="Watch this movie online via Castle app">Watch Online</a>
+          </div>
         </div>
       </div>
     </div>
