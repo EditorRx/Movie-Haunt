@@ -22,15 +22,9 @@ body {
 }
 
 @keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Site Title */
@@ -38,12 +32,7 @@ body {
     font-family: 'Russo One', sans-serif;
     font-size: 3rem;
     color: #a64dff;
-    text-shadow: 
-        0 0 5px #a64dff,
-        0 0 10px #a64dff,
-        0 0 20px #a64dff,
-        0 0 40px #9900cc,
-        0 0 80px #660099;
+    text-shadow: 0 0 5px #a64dff, 0 0 10px #a64dff, 0 0 20px #a64dff, 0 0 40px #9900cc, 0 0 80px #660099;
     -webkit-text-stroke: 0.1px white;
     text-align: center;
     margin: 20px 0;
@@ -74,12 +63,8 @@ body {
     padding-right: 50px;
 }
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* Hero */
@@ -91,6 +76,7 @@ body {
     margin: 20px auto;
     padding: 20px;
     gap: 16px;
+    flex-wrap: wrap;
 }
 .hero-left h1 {
     margin: 0;
@@ -183,6 +169,7 @@ body {
     gap: 4px;
     margin-left: 10px;
 }
+
 /* Sections & grid */
 .section {
     max-width: 1100px;
@@ -194,7 +181,7 @@ body {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1px));
     gap: 12px;
     max-width: 100%;
 }
@@ -235,7 +222,7 @@ body {
     margin-top: 6px;
 }
 
-/* Toggle for Latest 2025 */
+/* Toggle for Disclaimer */
 .toggle-header {
     display: flex;
     justify-content: space-between;
@@ -419,4 +406,18 @@ body {
     color: #000;
     border-color: transparent;
     box-shadow: 0 0 10px #bd59ff;
+}
+
+/* Disclaimer Text Styling */
+.disclaimer-text {
+    color: #fff; /* White text for disclaimer */
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.disclaimer-text a {
+    color: #ffff00; /* Yellow for complaint link */
+    text-decoration: underline;
+}
+.disclaimer-text a:hover {
+    color: #e6e600; /* Slightly darker yellow on hover */
 }
