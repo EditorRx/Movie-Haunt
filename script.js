@@ -11,7 +11,6 @@ const genresWrap = document.getElementById("genres");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("modal");
 const pagination = document.getElementById("pagination");
-const disclaimerText = document.getElementById("disclaimerText");
 
 // modal elements
 const modalPoster = document.getElementById("modalPoster");
@@ -112,11 +111,17 @@ function filterAndRender(filter) {
   const q = (searchInput.value || "").trim().toLowerCase();
   const byFilter = movieMatchesFilter(filter);
 
-  const filtered = movies.filter(m => {
-    const haystack = normalizeString(m.title + " " + (m.description || "") + " " + (m.genres || []).join(" "));
-    const matchesQuery = q === "" || movieMatchesQuery(haystack, q);
-    return byFilter(m) && matchesQuery;
-  });
+  let filtered = movies.filter(m => byFilter(m));
+
+  if (q !== "") {
+    // Apply advanced search only if query is provided
+    filtered = filtered.filter(m => movieMatchesQueryAdvanced(m, q));
+  }
+
+  // Sort filtered results by relevance if search query exists
+  if (q !== "") {
+    filtered = sortByRelevance(filtered, q);
+  }
 
   currentPage = 1; // reset on filter/search
   renderPaginatedGrid(filtered);
@@ -128,10 +133,32 @@ function movieMatchesFilter(filter) {
            || (m.releaseDate && m.releaseDate.startsWith(filter));
 }
 
-// Fuzzy search matching: ignore punctuation and partial words
-function movieMatchesQuery(haystack, query) {
-  const queryWords = normalizeString(query).split(' ');
-  return queryWords.some(word => haystack.includes(word)); // Match if any word is present
+// Advanced fuzzy search: prioritize exact matches, then partial
+function movieMatchesQueryAdvanced(movie, query) {
+  const normalizedQuery = normalizeString(query);
+  const queryWords = normalizedQuery.split(' ');
+  const haystack = normalizeString(movie.title + " " + (movie.description || "") + " " + (movie.genres || []).join(" "));
+
+  // Require at least 50% of query words to match
+  const matchingWords = queryWords.filter(word => haystack.includes(word)).length;
+  const matchRatio = matchingWords / queryWords.length;
+  return matchRatio >= 0.5; // At least 50% match
+}
+
+// Sort by relevance: higher score for more matching words and exact title match
+function sortByRelevance(list, query) {
+  const normalizedQuery = normalizeString(query);
+  const queryWords = normalizedQuery.split(' ');
+
+  return list.map(movie => {
+    const haystack = normalizeString(movie.title + " " + (movie.description || "") + " " + (movie.genres || []).join(" "));
+    const matchingWords = queryWords.filter(word => haystack.includes(word)).length;
+    const exactTitleMatch = haystack.includes(normalizedQuery) ? 10 : 0; // Bonus for exact title match
+    const score = matchingWords + exactTitleMatch;
+    return { movie, score };
+  })
+  .sort((a, b) => b.score - a.score) // Descending score (best first)
+  .map(item => item.movie);
 }
 
 // Normalize string: remove punctuation and lowercase
@@ -331,4 +358,4 @@ window.addMovie = function(movie) {
   buildGenreButtons();
   renderAll();
   updateCounters();
-};  
+};
