@@ -6,11 +6,12 @@ let movies = [];
 let genresSet = new Set();
 
 const moviesGrid = document.getElementById("moviesGrid");
-const latestGrid = document.getElementById("latestGrid");
+const latestGrid = document.getElementById("latestGrid"); // Kept for reference, but not used for disclaimer
 const genresWrap = document.getElementById("genres");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("modal");
 const pagination = document.getElementById("pagination");
+const disclaimerText = document.getElementById("disclaimerText");
 
 // modal elements
 const modalPoster = document.getElementById("modalPoster");
@@ -38,7 +39,7 @@ modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); }
 episodesModalClose.addEventListener("click", closeEpisodesModal);
 episodesModal.addEventListener("click", (e) => { if (e.target === episodesModal) closeEpisodesModal(); });
 
-// Latest toggle (header + content)
+// Disclaimer toggle (header + content)
 const latestHeader = document.getElementById("latestHeader");
 const latestContent = document.getElementById("latestContent");
 if (latestHeader && latestContent) {
@@ -53,6 +54,7 @@ fetch(MOVIES_JSON)
   .then(r => r.json())
   .then(data => {
     movies = data;
+    sortMoviesByReleaseDate(); // Sort movies by release date on load
     buildGenreButtons();
     renderAll();
     updateCounters(); // total counts (movies vs webseries)
@@ -61,6 +63,15 @@ fetch(MOVIES_JSON)
     console.error("Failed to load movies.json", err);
     moviesGrid.innerHTML = "<p style='color:#f66'>Failed to load movie list.</p>";
   });
+
+// Sort movies by release date (latest first)
+function sortMoviesByReleaseDate() {
+  movies.sort((a, b) => {
+    const dateA = new Date(a.releaseDate || "1970-01-01"); // Default to old date if no releaseDate
+    const dateB = new Date(b.releaseDate || "1970-01-01");
+    return dateB - dateA; // Descending order (latest first)
+  });
+}
 
 // Build genre buttons
 function buildGenreButtons() {
@@ -102,14 +113,13 @@ function filterAndRender(filter) {
   const byFilter = movieMatchesFilter(filter);
 
   const filtered = movies.filter(m => {
-    const haystack = (m.title + " " + (m.description || "") + " " + (m.genres || []).join(" ")).toLowerCase();
-    const matchesQuery = q === "" || haystack.includes(q);
+    const haystack = normalizeString(m.title + " " + (m.description || "") + " " + (m.genres || []).join(" "));
+    const matchesQuery = q === "" || movieMatchesQuery(haystack, q);
     return byFilter(m) && matchesQuery;
   });
 
   currentPage = 1; // reset on filter/search
   renderPaginatedGrid(filtered);
-  renderLatest();  // keep latest section content in sync
 }
 
 function movieMatchesFilter(filter) {
@@ -118,20 +128,20 @@ function movieMatchesFilter(filter) {
            || (m.releaseDate && m.releaseDate.startsWith(filter));
 }
 
+// Fuzzy search matching: ignore punctuation and partial words
+function movieMatchesQuery(haystack, query) {
+  const queryWords = normalizeString(query).split(' ');
+  return queryWords.some(word => haystack.includes(word)); // Match if any word is present
+}
+
+// Normalize string: remove punctuation and lowercase
+function normalizeString(str) {
+  return str.toLowerCase().replace(/[^\w\s]/gi, ''); // Remove punctuation
+}
+
 function renderAll() {
   currentPage = 1;
   renderPaginatedGrid(movies);
-  renderLatest();
-}
-
-// Latest (current year) grid — top 8
-function renderLatest() {
-  const currentYear = new Date().getFullYear().toString();
-  const latest = movies.filter(m =>
-    (m.genres || []).includes(currentYear) ||
-    (m.releaseDate && m.releaseDate.startsWith(currentYear))
-  );
-  renderGrid(latestGrid, latest.slice(0, 8));
 }
 
 function renderPaginatedGrid(list) {
@@ -150,10 +160,10 @@ function renderPaginatedGrid(list) {
 
   renderGrid(moviesGrid, pageItems);
 
-  // Show latest section only on page 1
+  // Show disclaimer section only on page 1 (optional behavior)
   if (latestHeader) {
-    const latestSection = latestHeader.parentElement;
-    if (latestSection) latestSection.style.display = (currentPage === 1) ? "" : "none";
+    const disclaimerSection = latestHeader.parentElement;
+    if (disclaimerSection) disclaimerSection.style.display = (currentPage === 1) ? "" : "none";
   }
 
   // Pagination controls
@@ -243,7 +253,6 @@ function openModal(movie) {
       e.preventDefault();
       openEpisodesModal(movie);
     };
-    // Comment out the next line if you want "Watch Online" to appear for series
     modalWatchOnline.style.display = "none"; // Hide for series
   } else {
     modalLink.innerText = "Download";
@@ -294,6 +303,13 @@ searchInput.addEventListener("input", () => {
   filterAndRender(filterLabel === "All" ? "" : filterLabel);
 });
 
+// Hide keyboard on Enter
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    searchInput.blur(); // Hide keyboard on mobile
+  }
+});
+
 // Movies + Webseries counters
 function updateCounters() {
   const movieCount = movies.filter(m => !m.type || m.type.toLowerCase() !== "series").length;
@@ -306,9 +322,10 @@ function updateCounters() {
   if (webseriesCounterEl) webseriesCounterEl.innerText = `Webseries: ${webseriesCount}`;
 }
 
-// Helper to add a movie at runtime
+// Helper to add a movie at runtime with correct positioning
 window.addMovie = function(movie) {
   movies.push(movie);
+  sortMoviesByReleaseDate(); // Sort after adding new movie
   genresSet.clear();
   genresWrap.innerHTML = "";
   buildGenreButtons();
