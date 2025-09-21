@@ -410,14 +410,14 @@ body {
 
 /* Disclaimer Text Styling */
 .disclaimer-text {
-    color: #fff; /* White text for disclaimer */
+    color: #ece6fa; /* text colour for disclaimer */
     line-height: 1.5;
     margin-bottom: 10px;
 }
 .disclaimer-text a {
-    color: #ffff00; /* Yellow for complaint link */
+    color: #46e0ba; /* Disclaimer link text colour  */
     text-decoration: underline;
 }
 .disclaimer-text a:hover {
-    color: #e6e600; /* Slightly darker yellow on hover */
+    color: #46e0ba; /* Disclaimer link text colour glow */
 }
