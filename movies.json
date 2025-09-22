@@ -8,6 +8,18 @@
   "telegramLink": "https://filmm.me/PedI59LB",
   "watchLink": "https://t.me/MovieHaunters/251"
 },
+    {
+  "title": "The Fast and the Furious",
+  "poster": "images/FastAndFurious2001.jpg",
+  "genres": ["Action", "Crime", "Thriller"],
+  "rating": "6.8",
+  "length": "1h 46m",
+  "language": ["English", "Hindi dubbed"],
+  "releaseDate": "2001-06-22",
+  "description": "Undercover cop infiltrates L.A. street racers.",
+  "telegramLink": "_",
+  "watchLink": "https://neobox.in/s/7WFyebQuir"
+    },
 {
   "title": "The Conjuring Last Rites",
   "poster": "images/ConjuringRites.jpg",
