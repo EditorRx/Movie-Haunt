@@ -9,6 +9,18 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "2 Fast 2 Furious",
+  "poster": "images/2Fast.jpg",
+  "genres": ["Action", "Crime", "Thriller"],
+  "rating": "5.9",
+  "length": "1h 47m",
+  "language": ["English", "Hindi dubbed"],
+  "releaseDate": "2003-06-06",
+  "description": "Ex-cop joins mission to catch drug lord.",
+  "telegramLink": "_",
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za"
+    },
+    {
   "title": "The Fast and the Furious",
   "poster": "images/FastAndFurious2001.jpg",
   "genres": ["Action", "Crime", "Thriller"],
@@ -18,7 +30,7 @@
   "releaseDate": "2001-06-22",
   "description": "Undercover cop infiltrates L.A. street racers.",
   "telegramLink": "_",
-  "watchLink": "https://neobox.in/s/7WFyebQuir"
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za"
     },
 {
   "title": "The Conjuring Last Rites",
