@@ -248,7 +248,7 @@ function renderGrid(container, list) {
             const tag = document.createElement("div");
             tag.className = "age-tag";
             const textSpan = document.createElement("span");
-            textSpan.innerText = "18+";
+            textSpan.innerText = (movie.is18PlusBrutal && !movie.is18PlusAdult) ? "☢" : "18+";
             textSpan.className = "age-text"; // For animation
 
             if (movie.is18PlusAdult && movie.is18PlusBrutal) {
