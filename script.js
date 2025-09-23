@@ -6,7 +6,7 @@ let movies = [];
 let genresSet = new Set();
 
 const moviesGrid = document.getElementById("moviesGrid");
-const latestGrid = document.getElementById("latestGrid"); // Kept for reference, but not used for disclaimer
+const latestGrid = document.getElementById("latestGrid"); // Kept for reference, but not used
 const genresWrap = document.getElementById("genres");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("modal");
@@ -23,6 +23,7 @@ const modalGenres = document.getElementById("modalGenres");
 const modalRelease = document.getElementById("modalRelease");
 const modalLink = document.getElementById("modalLink");
 const modalWatchOnline = document.getElementById("modalWatchOnline");
+const modalWarning = document.getElementById("modalWarning");
 
 // episodes modal elements
 const episodesModal = document.getElementById("episodesModal");
@@ -114,7 +115,6 @@ function filterAndRender(filter) {
   let filtered = movies.filter(m => byFilter(m));
 
   if (q !== "") {
-    // Apply advanced search only if query is provided
     filtered = filtered.filter(m => movieMatchesQueryAdvanced(m, q));
   }
 
@@ -229,35 +229,55 @@ function createPageButton(label, onClick) {
 }
 
 function renderGrid(container, list) {
-  container.innerHTML = "";
-  if (list.length === 0) {
-    container.innerHTML = "<p style='color:var(--muted)'>No movies found.</p>";
-    return;
-  }
-  list.forEach(movie => {
-    const card = document.createElement("div");
-    card.className = "card";
+    container.innerHTML = "";
+    if (list.length === 0) {
+        container.innerHTML = "<p style='color:var(--muted)'>No movies found.</p>";
+        return;
+    }
+    list.forEach(movie => {
+        const card = document.createElement("div");
+        card.className = "card";
 
-    const img = document.createElement("img");
-    img.src = movie.poster;
-    img.alt = movie.title;
-    img.loading = "lazy";
+        const img = document.createElement("img");
+        img.src = movie.poster;
+        img.alt = movie.title;
+        img.loading = "lazy";
 
-    const h3 = document.createElement("h3");
-    h3.innerText = movie.title;
+        // Add 18+ tag if applicable
+        if (movie.is18PlusAdult || movie.is18PlusBrutal) {
+            const tag = document.createElement("div");
+            tag.className = "age-tag";
+            const textSpan = document.createElement("span");
+            textSpan.innerText = "18+";
+            textSpan.className = "age-text"; // For animation
 
-    const meta = document.createElement("div");
-    meta.className = "meta";
-    meta.innerText = `${movie.releaseDate || ""} • ${movie.rating || "—"}`;
+            if (movie.is18PlusAdult && movie.is18PlusBrutal) {
+                tag.classList.add("age-both");
+            } else if (movie.is18PlusAdult) {
+                tag.classList.add("age-adult");
+            } else if (movie.is18PlusBrutal) {
+                tag.classList.add("age-brutal");
+            }
 
-    card.appendChild(img);
-    card.appendChild(h3);
-    card.appendChild(meta);
+            tag.appendChild(textSpan);
+            card.appendChild(tag);
+        }
 
-    card.addEventListener("click", () => openModal(movie));
+        const h3 = document.createElement("h3");
+        h3.innerText = movie.title;
 
-    container.appendChild(card);
-  });
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.innerText = `${movie.releaseDate || ""} • ${movie.rating || "—"}`;
+
+        card.appendChild(img);
+        card.appendChild(h3);
+        card.appendChild(meta);
+
+        card.addEventListener("click", () => openModal(movie));
+
+        container.appendChild(card);
+    });
 }
 
 function openModal(movie) {
@@ -292,6 +312,17 @@ function openModal(movie) {
   modalWatchOnline.href = movie.watchLink || "https://filmm.me/PedI59LB"; // Use watchLink or fallback
   modalWatchOnline.innerText = "Watch Online";
   modalWatchOnline.title = "Stream this movie online"; // Tooltip for clarity
+
+  // Add warning for 18+ content
+  if (movie.is18PlusAdult && movie.is18PlusBrutal) {
+    modalWarning.textContent = "Contains Adult and Brutal/Gore content (18+)";
+  } else if (movie.is18PlusAdult) {
+    modalWarning.textContent = "Contains Adult scenes (18+)";
+  } else if (movie.is18PlusBrutal) {
+    modalWarning.textContent = "Contains Brutal/Gore content (18+)";
+  } else {
+    modalWarning.textContent = ""; // No warning for non-18+ movies
+  }
 
   modal.style.display = "flex";
 }
