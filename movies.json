@@ -188,7 +188,7 @@
   {
   "title": "Vash: Level 2",
   "poster": "images/Vash2.jpg",
-  "genres": ["Psychological", "Horror"],
+  "genres": ["Horror"],
   "rating": "8.1",
   "length": "1h 43m",
   "language": "Hindi dubbed",
@@ -236,7 +236,7 @@
   {
   "title": "Pushpa 2: The Rule – Reloaded Version",
   "poster": "images/Pushpa2Reloaded.jpg",
-  "genres": ["Action", "Drama"],
+  "genres": ["Action", "Drama", "crime"],
   "rating": "7.1",
   "length": "3h 44m",
   "language": "Hindi",
