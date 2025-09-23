@@ -473,6 +473,19 @@ body {
     border-color: transparent;
     box-shadow: 0 0 10px #bd59ff;
 }
+/* Disclaimer Text Styling */
+.disclaimer-text {
+    color: #f3dff5; /* White text for disclaimer */
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.disclaimer-text a {
+    color: #79edb3; /* Yellow for complaint link */
+    text-decoration: underline;
+}
+.disclaimer-text a:hover {
+    color: #79edb3; /* Slightly darker yellow on hover */
+}
 
 /* Warning text styling in modal */
 .modal-warning {
