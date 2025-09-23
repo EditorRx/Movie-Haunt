@@ -181,7 +181,7 @@ body {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1px));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 12px;
     max-width: 100%;
 }
@@ -195,6 +195,7 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    position: relative; /* For absolute positioning of tag */
 }
 .card:hover {
     transform: translateY(-6px);
@@ -220,6 +221,71 @@ body {
     font-size: 0.82rem;
     color: var(--muted);
     margin-top: 6px;
+}
+
+/* 18+ Tag Styling */
+.age-tag {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.7rem;
+    z-index: 1;
+    overflow: hidden; /* Ensure text stays within bounds */
+}
+
+/* Adult Tag */
+.age-adult {
+    background: #C0C0C0; /* Silver */
+}
+.age-adult .age-text {
+    color: #FF0000; /* Normal Red as base */
+    animation: textColorCycleAdult 3s infinite;
+}
+
+@keyframes textColorCycleAdult {
+    0% { color: #CD5C5C; } /* Light Red */
+    33% { color: #8B0000; } /* Normal Red */
+    66% { color: #4B0000; } /* Dark Red */
+    100% { color: #CD5C5C; } /* Back to Light Red */
+}
+
+/* Brutal Tag */
+.age-brutal {
+    background: #FFD700; /* Gold */
+}
+.age-brutal .age-text {
+    color: #8B0000; /* Normal Dark Red as base */
+    animation: textColorCycleBrutal 3s infinite;
+}
+
+@keyframes textColorCycleBrutal {
+    0% { color: #CD5C5C; } /* Light Dark Red */
+    33% { color: #8B0000; } /* Normal Dark Red */
+    66% { color: #4B0000; } /* Deep Dark Red */
+    100% { color: #CD5C5C; } /* Back to Light Dark Red */
+}
+
+/* Both Tag */
+.age-both {
+    background: #87CEEB; /* Sky Blue */
+}
+.age-both .age-text {
+    color: #800080; /* Normal Purple as base */
+    animation: textColorCycleBoth 3s infinite;
+}
+
+@keyframes textColorCycleBoth {
+    0% { color: #CD5C5C; } /* Light Purple */
+    33% { color: #8B0000; } /* Normal Purple */
+    66% { color: #4B0000; } /* Deep Purple */
+    100% { color: #CD5C5C; } /* Back to Light Purple */
 }
 
 /* Toggle for Disclaimer */
@@ -408,16 +474,11 @@ body {
     box-shadow: 0 0 10px #bd59ff;
 }
 
-/* Disclaimer Text Styling */
-.disclaimer-text {
-    color: #ece6fa; /* text colour for disclaimer */
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-.disclaimer-text a {
-    color: #46e0ba; /* Disclaimer link text colour  */
-    text-decoration: underline;
-}
-.disclaimer-text a:hover {
-    color: #46e0ba; /* Disclaimer link text colour glow */
+/* Warning text styling in modal */
+.modal-warning {
+    color: #ff4444; /* Red for visibility */
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
 }
