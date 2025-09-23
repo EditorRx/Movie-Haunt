@@ -209,7 +209,9 @@
   "releaseDate": "2025-08-27",
   "description": "Dark magic spreads through schoolchildren.",
   "telegramLink": "https://t.me/MovieHaunters/225",
-    "watchLink": "https://neoboxlinks.com/t/hqaafUb7za"
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
+      "is18PlusAdult": false,
+  "is18PlusBrutal": true
   },
   {
     "title": "Superman 2025",
@@ -428,7 +430,9 @@
   "releaseDate": "2025-05-16",
   "description": "Student fights nightmare to save family.",
   "telegramLink": "https://t.me/MovieHaunters/42",
-  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za"
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
+      "is18PlusAdult": false,
+  "is18PlusBrutal": true
 },
 {
   "title": "Deadpool & Wolverine",
@@ -440,7 +444,9 @@
   "releaseDate": "2024-07-25",
   "description": "Deadpool and Wolverine unite to save multiverse.",
   "telegramLink": "https://t.me/MovieHaunters/130",
-  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za"
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
+  "is18PlusAdult": false,
+  "is18PlusBrutal": true
 },
     {
     "title": "Grafted",
@@ -452,7 +458,9 @@
     "releaseDate": "2024-08",
     "description": "Exchange student chases fleeting popularity.",
     "telegramLink": "https://t.me/MovieHaunters/122",
-    "watchLink": "https://neoboxlinks.com/t/hqaafUb7za"
+    "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
+    "is18PlusAdult": false,
+    "is18PlusBrutal": true
   },
       {
     "title": "Squid Game season 1",
@@ -474,7 +482,9 @@
       "https://t.me/MovieHaunters/60",
       "https://t.me/MovieHaunters/61",
       "https://t.me/MovieHaunters/66"
-    ]
+    ],
+    "is18PlusAdult": true,
+    "is18PlusBrutal": false
   },
 {
   "title": "Dil Bechara",
@@ -510,8 +520,10 @@
   "releaseDate": "2018-06-08",
   "description": "Family uncovers terrifying ancestral secrets.",
   "telegramLink": "https://t.me/MovieHaunters/32",
-  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za"
-},
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
+  "is18PlusAdult": true,
+  "is18PlusBrutal": true
+  },
   {
     "title": "Lucifer Season 3",
     "poster": "images/Lucifer3.jpg",
@@ -549,7 +561,9 @@
       "https://hubstream.art/#6hfhnp",
       "https://hubstream.art/#8totbq",
       "https://hubstream.art/#bgagum"
-    ]
+    ],
+    "is18PlusAdult": true,
+    "is18PlusBrutal": false
   },
   {
     "title": "Lucifer Season 2",
@@ -580,7 +594,9 @@
       "https://hubstream.art/#8tuqkm",
       "https://hubstream.art/#pkmsmv",
       "https://hubstream.art/#gezmw8"
-    ]
+    ],
+    "is18PlusAdult": true,
+    "is18PlusBrutal": false
   },
   {
     "title": "Lucifer Season 1",
@@ -606,7 +622,9 @@
       "https://t.me/MovieHaunters/181",
       "https://t.me/MovieHaunters/182",
       "https://t.me/MovieHaunters/183"
-    ]
+    ],
+    "is18PlusAdult": true,
+    "is18PlusBrutal": false
   },
   {
     "title": "Interstellar",
