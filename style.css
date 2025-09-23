@@ -266,10 +266,10 @@ body {
 }
 
 @keyframes textColorCycleBrutal {
-    0% { color: #CD5C5C; } /* Light Dark Red */
-    33% { color: #8B0000; } /* Normal Dark Red */
-    66% { color: #4B0000; } /* Deep Dark Red */
-    100% { color: #CD5C5C; } /* Back to Light Dark Red */
+    0% { color: #0084ff; } /* sky blue */
+    33% { color: #ff143f; } /* Normal Red */
+    66% { color: #0800ff; } /* Deep Blue*/
+    100% { color: #f714ff; } /* pink*/
 }
 
 /* Both Tag */
