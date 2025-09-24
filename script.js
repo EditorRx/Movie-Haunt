@@ -263,6 +263,16 @@ function renderGrid(container, list) {
             card.appendChild(tag);
         }
 
+              // Add Coming Soon tag if comingSoon is true
+        if (movie.comingSoon) {
+             const comingSoonTag = document.createElement("div");
+             comingSoonTag.className = "coming-soon-tag";
+             const comingSoonText = document.createElement("span");
+             comingSoonText.innerText = "Coming Soon";
+             comingSoonTag.appendChild(comingSoonText);
+             card.appendChild(comingSoonTag);
+        }
+
         const h3 = document.createElement("h3");
         h3.innerText = movie.title;
 
