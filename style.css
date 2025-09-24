@@ -495,3 +495,22 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
+/* Coming Soon Tag Styling */
+.coming-soon-tag {
+    position: absolute;
+    top: 190px; /* Below 18+ tag (5px + 20px height + 5px gap) */
+    right: 1px;
+    width: 140px; /* Wider to fit "Coming Soon" */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background: #0a8f15; /* Green background */
+    color: #fff; /* White text */
+    z-index: 0; /* Below 18+ tag (which has z-index: 1) */
+    overflow: hidden;
+    box-shadow: 0 0 70px #90ee90, 0 0 20px rgba(144, 238, 144, 0.5); /* Light green glow */
+}
