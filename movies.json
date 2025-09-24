@@ -75,7 +75,7 @@
     },
     {
   "title": "Furious 7",
-  "poster": "images/Furious7.jpg",
+  "poster": "images/Furious 7.jpg",
   "genres": ["Action", "Crime", "Thriller", "Fast and Furious"],
   "rating": "7.1",
   "length": "2h 17m",
@@ -95,9 +95,9 @@
   "language": ["English", "Hindi dubbed"],
   "releaseDate": "2009-04-03",
   "description": "Dom and Brian reunite for revenge.",
-  "telegramLink": "https://editorrx.github.io/Coming-Soon/",
+  "telegramLink": "https://t.me/MovieHaunters/300",
   "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
-  "comingSoon": true
+  "comingSoon": false
     },
     {
   "title": "Fast Five",
