@@ -501,13 +501,14 @@ body {
     position: absolute;
     top: 190px; /* Below 18+ tag (5px + 20px height + 5px gap) */
     right: 1px;
-    width: 140px; /* Wider to fit "Coming Soon" */
-    height: 20px;
+    width: 80px; /* Wider to fit "Coming Soon" */
+    height: 17px;
     display: flex;
+    Border-radius: 100px;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     background: #0a8f15; /* Green background */
     color: #fff; /* White text */
     z-index: 0; /* Below 18+ tag (which has z-index: 1) */
