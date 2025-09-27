@@ -150,6 +150,21 @@
   "is18PlusBrutal": false
     },
     {
+  "title": "The Wolf of Wall Street",
+  "poster": "images/Thewolfofwall.jpg",
+  "genres": ["Biography", "Crime", "Drama"],
+  "rating": "8.2",
+  "length": "3h",
+  "language": ["English", "Hindi dubbed"],
+  "releaseDate": "2013-12-25",
+  "description": "Stockbroker rises with greed, drugs, excess.",
+  "telegramLink": "_",
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
+  "comingSoon": true
+  "is18PlusAdult": true,
+  "is18PlusBrutal": false
+    },
+    {
   "title": "The Fast and the Furious: Tokyo Drift",
   "poster": "images/FFTokyodrift.jpg",
   "genres": ["Action", "Crime", "Thriller" , "Fast and Furious"],
