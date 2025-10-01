@@ -9,6 +9,19 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "Sooryavanshi",
+  "poster": "images/Sooryavanshi.jpg",
+  "genres": ["Action", "Crime", "Thriller"],
+  "rating": "6.3",
+  "length": "2h 23m",
+  "language": ["Hindi"],
+  "releaseDate": "2021-11-05",
+  "description": "ATS chief fights terrorists to stop attacks.",
+  "telegramLink": "_",
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
+  "comingSoon": true 
+    },
+    {
   "title": "They Call Him OG",
   "poster": "images/OG.jpg",
   "genres": ["Action", "Crime", "Drama"],
