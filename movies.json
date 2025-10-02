@@ -9,6 +9,19 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "Jujutsu Kaisen 0",
+  "poster": "images/JJK0.jpg.jpg",
+  "genres": ["Anime", "Action", "Fantasy"],
+  "rating": "7.8",
+  "length": "1h 52m",
+  "language": ["Japanese", "Hindi dubbed", "English"],
+  "releaseDate": "2021-12-24",
+  "description": "Yuta learns sorcery to control cursed spirit.",
+  "telegramLink": "_",
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
+  "comingSoon": true
+    },
+    {
   "title": "Sooryavanshi",
   "poster": "images/Sooryavanshi.jpg",
   "genres": ["Action", "Crime", "Thriller"],
@@ -17,9 +30,8 @@
   "language": ["Hindi"],
   "releaseDate": "2021-11-05",
   "description": "ATS chief fights terrorists to stop attacks.",
-  "telegramLink": "_",
-  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za",
-  "comingSoon": true 
+  "telegramLink": "https://t.me/MovieHaunters/313",
+  "watchLink": "https://neoboxlinks.com/t/hqaafUb7za"
     },
     {
   "title": "They Call Him OG",
