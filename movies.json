@@ -9,6 +9,19 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "Kantara: Chapter 1",
+  "poster": "images/Kantara.jpg",
+  "genres": ["Mythological", "Action", "Drama"],
+  "rating": "8.6",
+  "length": "169m",
+  "language": ["Hindi dubbed"],
+  "releaseDate": "2025-10-02",
+  "description": "Origins of ritual, conflict, divine lore.",
+  "telegramLink": "_",
+  "watchLink": "https://youtu.be/v63miIYTOh0?si=F7rdG7Y3SE5jtd2y",
+  "comingSoon": true
+    },
+    {
   "title": "Your Fault",
   "poster": "images/Yourfault.jpg",
   "genres": ["Romance", "Drama"],
