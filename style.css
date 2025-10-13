@@ -121,6 +121,20 @@ body {
     background: #a8e04d;
     box-shadow: 0 0 15px rgba(191, 250, 95, 0.7);
 }
+.btn.subscribe-btn { /* New style for Subscribe button */
+    background: #ff0000; /* YouTube red */
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid transparent;
+    margin-right: 10px;
+    display: inline-block;
+    padding: 10px 14px;
+}
+.btn.subscribe-btn i {
+    margin-right: 5px; /* Space between icon and text */
+}
 #searchInput {
     padding: 10px 12px;
     border-radius: 8px;
