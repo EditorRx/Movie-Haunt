@@ -182,7 +182,7 @@ function renderPaginatedGrid(list) {
   if (currentPage > totalPages) currentPage = totalPages;
 
   const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
+  end = start + itemsPerPage;
   const pageItems = list.slice(start, end);
 
   renderGrid(moviesGrid, pageItems);
