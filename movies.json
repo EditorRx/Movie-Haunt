@@ -9,6 +9,19 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "Batman v Superman: Dawn of Justice",
+  "poster": "images/SVB.jpg",
+  "genres": ["Action", "Superhero", "Thriller"],
+  "rating": "6.4",
+  "length": "2h 31m",
+  "language": ["English", "Hindi dubbed"],
+  "releaseDate": "2016-03-25",
+  "description": "Batman and Superman clash over their differing views on justice as a greater threat emerges to humanity.",
+  "telegramLink": "_",
+  "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream",
+  "comingSoon": true
+    },
+    {
   "title": "Minnal Murali",
   "poster": "images/Minnalmurali.jpg",
   "genres": ["Action", "Comedy", "Superhero"],
