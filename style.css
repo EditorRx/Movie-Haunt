@@ -543,32 +543,42 @@ body {
     box-shadow: 0 0 70px #90ee90, 0 0 20px rgba(144, 238, 144, 0.5); /* Light green glow */
 }
 
-/* Voice Search Button Styling */
-.search-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
+/* Voice search mic button + status */
 .voice-btn {
-  width: 40px;
-  height: 40px;
-  background: #a64dff; /* Purple to match theme */
-  border: 1px solid #a64dff;
-  border-left: none; /* Connect with input */
-  border-radius: 0 8px 8px 0;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: box-shadow .18s, transform .12s;
+}
+.voice-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.6); }
+
+/* active/listening state */
+.voice-btn.listening {
+  box-shadow: 0 6px 30px rgba(159,69,255,0.18), 0 0 28px rgba(159,69,255,0.12) inset;
+  background: linear-gradient(180deg, rgba(159,69,255,0.12), rgba(0,0,0,0.25));
+  color: #9f45ff;
 }
 
-.voice-btn:hover {
-  background: #8a3dcc; /* Darker purple on hover */
+/* small status text (shows interim text or messages) */
+.voice-status {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
 }
 
-.voice-btn i {
-  font-size: 16px;
-}
+/* optional: change svg stroke to inherit color */
+.voice-btn svg { color: currentColor; stroke: currentColor; }
