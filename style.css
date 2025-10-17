@@ -543,42 +543,20 @@ body {
     box-shadow: 0 0 70px #90ee90, 0 0 20px rgba(144, 238, 144, 0.5); /* Light green glow */
 }
 
-/* Voice search mic button + status */
 .voice-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  background: none;
+  border: none;
+  color: var(--accent, #fff);
+  margin-left: 8px;
   cursor: pointer;
-  margin-left: 8px;
-  transition: box-shadow .18s, transform .12s;
+  transition: 0.2s;
 }
-.voice-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.6); }
-
-/* active/listening state */
-.voice-btn.listening {
-  box-shadow: 0 6px 30px rgba(159,69,255,0.18), 0 0 28px rgba(159,69,255,0.12) inset;
-  background: linear-gradient(180deg, rgba(159,69,255,0.12), rgba(0,0,0,0.25));
-  color: #9f45ff;
+.voice-btn:hover {
+  transform: scale(1.2);
+  color: #ff4d4d;
 }
-
-/* small status text (shows interim text or messages) */
 .voice-status {
-  display: inline-block;
-  margin-left: 8px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  max-width: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  vertical-align: middle;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-left: 6px;
 }
-
-/* optional: change svg stroke to inherit color */
-.voice-btn svg { color: currentColor; stroke: currentColor; }
