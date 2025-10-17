@@ -401,33 +401,117 @@ window.addMovie = function(movie) {
   updateCounters();
 };
 
-// Voice Search Functionality (Adapted from working code)
-const voiceSearchBtn = document.getElementById("voiceSearchBtn");
-if (voiceSearchBtn) {
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (SpeechRecognition) {
-    const recognition = new SpeechRecognition();
-    recognition.lang = 'en-US'; // Change to 'hi-IN' for Hindi
-    recognition.interimResults = false;
+// ---- Voice search integration (Web Speech API) ----
+// Requires existing `searchInput` element in DOM.
 
-    voiceSearchBtn.addEventListener('click', () => {
-      searchInput.value = "Listening..."; // Temporary feedback
-      recognition.start();
-    });
+(function setupVoiceSearch(){
+  const voiceBtn = document.getElementById("voiceSearchBtn");
+  const voiceStatus = document.getElementById("voiceStatus");
+  if (!voiceBtn || !searchInput) return; // safety
 
-    recognition.onresult = (event) => {
-      const transcript = event.results[0][0].transcript.toLowerCase();
-      searchInput.value = transcript;
-      searchInput.focus();
-      filterAndRender(''); // Trigger search
-    };
-
-    recognition.onerror = (event) => {
-      searchInput.value = "Error: Mic access denied or unavailable";
-      console.error('Voice error:', event.error);
-    };
-  } else {
-    voiceSearchBtn.style.display = 'none';
-    searchInput.placeholder = 'Voice search unavailable - Use text';
+  // feature detect
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+  if (!SpeechRecognition) {
+    // browser not supported
+    voiceStatus.textContent = "Voice not supported";
+    voiceBtn.disabled = true;
+    voiceBtn.title = "Voice search not supported in this browser";
+    return;
   }
-}
+
+  const recog = new SpeechRecognition();
+  recog.lang = "en-IN"; // change to 'hi-IN' or 'en-US' if you prefer
+  recog.interimResults = true; // show interim results
+  recog.maxAlternatives = 1;
+  recog.continuous = false; // keep it single-shot for UI simplicity
+
+  let listening = false;
+
+  function setListening(state){
+    listening = !!state;
+    if (listening) {
+      voiceBtn.classList.add("listening");
+      voiceBtn.title = "Listening... click to stop";
+      voiceStatus.textContent = "Listening…";
+    } else {
+      voiceBtn.classList.remove("listening");
+      voiceBtn.title = "Start voice search";
+      // keep last result visible for a moment, or clear
+      // voiceStatus.textContent = "";
+    }
+  }
+
+  // click toggles start/stop
+  voiceBtn.addEventListener("click", () => {
+    if (listening) {
+      recog.stop(); // will trigger onend
+      setListening(false);
+    } else {
+      try {
+        recog.start();
+        setListening(true);
+      } catch (err) {
+        console.warn("SpeechRecognition start error:", err);
+      }
+    }
+  });
+
+  let interimTranscript = "";
+
+  recog.onresult = (event) => {
+    let finalTranscript = "";
+    interimTranscript = "";
+
+    for (let i = event.resultIndex; i < event.results.length; ++i) {
+      const result = event.results[i];
+      if (result.isFinal) finalTranscript += result[0].transcript;
+      else interimTranscript += result[0].transcript;
+    }
+
+    // prefer finalTranscript if available; otherwise interim
+    const textToUse = (finalTranscript || interimTranscript).trim();
+    if (textToUse) {
+      voiceStatus.textContent = textToUse.length > 40 ? textToUse.slice(0,40) + "…" : textToUse;
+    }
+
+    // If final result, write to search input and trigger search
+    if (finalTranscript) {
+      // fill search input
+      searchInput.value = finalTranscript.trim();
+      // dispatch input event so your existing listener runs (filterAndRender)
+      const ev = new Event('input', { bubbles: true });
+      searchInput.dispatchEvent(ev);
+
+      // stop state
+      setListening(false);
+    }
+  };
+
+  recog.onerror = (e) => {
+    console.warn("SpeechRecognition error", e);
+    voiceStatus.textContent = "Voice error";
+    setTimeout(() => {
+      if (!listening) voiceStatus.textContent = "";
+    }, 2000);
+    setListening(false);
+  };
+
+  recog.onend = () => {
+    // when recognition ends (user stopped speaking or .stop() called)
+    setListening(false);
+    // if there's interim transcript left and no final produced, use interim
+    if (interimTranscript && !searchInput.value) {
+      searchInput.value = interimTranscript.trim();
+      const ev = new Event('input', { bubbles: true });
+      searchInput.dispatchEvent(ev);
+      voiceStatus.textContent = interimTranscript.slice(0,40) + (interimTranscript.length>40?'…':'');
+    }
+    // clear interim memory
+    interimTranscript = "";
+    setTimeout(()=>{ if (!listening) voiceStatus.textContent = ""; }, 2500);
+  };
+
+  // optional: stop listening on page hide/unload
+  window.addEventListener('pagehide', () => { if (listening) recog.stop(); });
+
+})();
