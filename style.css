@@ -121,7 +121,7 @@ body {
     background: #a8e04d;
     box-shadow: 0 0 15px rgba(191, 250, 95, 0.7);
 }
-.btn.subscribe-btn { /* New style for Subscribe button */
+.btn.subscribe-btn {
     background: #ff0000; /* YouTube red */
     color: #fff;
     border-radius: 8px;
@@ -137,11 +137,12 @@ body {
 }
 #searchInput {
     padding: 10px 12px;
-    border-radius: 8px;
+    border-radius: 8px 0 0 8px; /* Rounded left side */
     border: 1px solid rgba(255,255,255,0.06);
     background: transparent;
     color: #fff;
     min-width: 200px;
+    border-right: none; /* Remove right border to connect with button */
 }
 
 /* Genres nav */
@@ -456,6 +457,17 @@ body {
     .site-title {
         font-size: 2rem;
     }
+    .search-container {
+        width: 100%;
+    }
+    #searchInput {
+        border-radius: 8px 8px 8px 8px; /* Full rounded on mobile */
+        border-right: 1px solid rgba(255,255,255,0.06); /* Restore border */
+    }
+    .voice-btn {
+        border-radius: 8px;
+        border-left: 1px solid rgba(255,255,255,0.06); /* Match input border */
+    }
 }
 
 /* Pagination */
@@ -487,6 +499,7 @@ body {
     border-color: transparent;
     box-shadow: 0 0 10px #bd59ff;
 }
+
 /* Disclaimer Text Styling */
 .disclaimer-text {
     color: #f3dff5; /* White text for disclaimer */
@@ -518,7 +531,7 @@ body {
     width: 80px; /* Wider to fit "Coming Soon" */
     height: 17px;
     display: flex;
-    Border-radius: 100px;
+    border-radius: 100px;
     align-items: center;
     justify-content: center;
     font-weight: bold;
@@ -528,4 +541,34 @@ body {
     z-index: 0; /* Below 18+ tag (which has z-index: 1) */
     overflow: hidden;
     box-shadow: 0 0 70px #90ee90, 0 0 20px rgba(144, 238, 144, 0.5); /* Light green glow */
+}
+
+/* Voice Search Button Styling */
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.voice-btn {
+  width: 40px;
+  height: 40px;
+  background: #a64dff; /* Purple to match theme */
+  border: 1px solid #a64dff;
+  border-left: none; /* Connect with input */
+  border-radius: 0 8px 8px 0;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.voice-btn:hover {
+  background: #8a3dcc; /* Darker purple on hover */
+}
+
+.voice-btn i {
+  font-size: 16px;
 }
