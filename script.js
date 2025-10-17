@@ -182,7 +182,7 @@ function renderPaginatedGrid(list) {
   if (currentPage > totalPages) currentPage = totalPages;
 
   const start = (currentPage - 1) * itemsPerPage;
-  end = start + itemsPerPage;
+  const end = start + itemsPerPage;
   const pageItems = list.slice(start, end);
 
   renderGrid(moviesGrid, pageItems);
@@ -400,3 +400,52 @@ window.addMovie = function(movie) {
   renderAll();
   updateCounters();
 };
+
+// Voice Search Functionality
+const voiceSearchBtn = document.getElementById("voiceSearchBtn");
+
+if (voiceSearchBtn) {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let recognition;
+
+  if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US'; // English; change to 'hi-IN' for Hindi
+
+    recognition.onstart = function() {
+      voiceSearchBtn.style.background = '#ff4444'; // Red while listening
+      voiceSearchBtn.innerHTML = '<i class="fas fa-microphone-slash"></i>'; // Stop icon
+    };
+
+    recognition.onresult = function(event) {
+      const transcript = event.results[0][0].transcript.toLowerCase();
+      searchInput.value = transcript;
+      searchInput.focus(); // Keep input active
+      filterAndRender(''); // Trigger search with current filter
+    };
+
+    recognition.onerror = function(event) {
+      console.error('Voice recognition error:', event.error);
+      voiceSearchBtn.innerHTML = '<i class="fas fa-microphone"></i>'; // Reset icon
+      voiceSearchBtn.style.background = '#a64dff';
+    };
+
+    recognition.onend = function() {
+      voiceSearchBtn.innerHTML = '<i class="fas fa-microphone"></i>'; // Reset icon
+      voiceSearchBtn.style.background = '#a64dff';
+    };
+
+    voiceSearchBtn.addEventListener('click', () => {
+      if (recognition) {
+        recognition.start();
+      } else {
+        alert('Voice search is not supported in this browser. Please use text search.');
+      }
+    });
+  } else {
+    voiceSearchBtn.style.display = 'none'; // Hide if not supported
+    searchInput.placeholder = 'Voice search not supported - Use text search';
+  }
+}
