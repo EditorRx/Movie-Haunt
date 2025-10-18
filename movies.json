@@ -356,6 +356,19 @@
     "telegramLink": "https://t.me/MovieHaunters/172",
       "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream"
   },
+    {
+  "title": "The Ba***ds of Bollywood",
+  "poster": "images/Koki.jpg",
+  "description": "Ambitious outsider navigates chaotic Bollywood underworld.",
+  "rating": "—",
+  "length": "Approx 39-56m each episode",
+  "language": ["Hindi"],
+  "genres": ["Drama", "Satire", "Webseries"],
+  "releaseDate": "2025-09-18",
+  "type": "series",
+  "comingSoon": true,
+ "episodeLinks": []
+    },
   {
     "title": "Wednesday Season 2",
     "poster": "images/wednesday2.jpg",
