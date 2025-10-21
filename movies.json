@@ -9,6 +9,18 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "Avatar: The Way of Water",
+  "poster": "images/Avatar.jpg",
+  "genres": ["Action", "Adventure", "Sci-Fi"],
+  "rating": "7.6",
+  "length": "3h 12m",
+  "language": ["English", "Hindi dubbed"],
+  "releaseDate": "2022-12-16",
+  "description": "Jake Sully protects his family under ocean threat.",
+  "telegramLink": "https://fast-dl.lol/dl/2f9118",
+  "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream"
+    },
+    {
   "title": "Batman v Superman: Dawn of Justice",
   "poster": "images/SVB.jpg",
   "genres": ["Action", "Superhero", "Thriller"],
@@ -360,16 +372,16 @@
   "title": "The Ba***ds of Bollywood",
   "poster": "images/Koki.jpg",
   "description": "Ambitious outsider navigates chaotic Bollywood underworld.",
-  "rating": "—",
+  "rating": "7.6",
   "length": "Approx 39-56m each episode",
   "language": ["Hindi"],
   "genres": ["Drama", "Satire", "Webseries"],
   "releaseDate": "2025-09-18",
   "type": "series",
-  "comingSoon": true,
  "episodeLinks": [
      "https://t.me/MovieHaunters/352",
-     "https://t.me/MovieHaunters/357"
+     "https://t.me/MovieHaunters/357",
+     "https://t.me/MovieHaunters/359"
  ]
     },
   {
