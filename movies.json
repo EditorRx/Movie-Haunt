@@ -9,6 +9,20 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "Gangubai Kathiawadi",
+  "poster": "images/G.jpg",
+  "genres": ["Biography", "Crime", "Drama"],
+  "rating": "7.8",
+  "length": "2h 36m",
+  "language": ["Hindi"],
+  "releaseDate": "2022-02-25",
+  "description": "A woman rises from brothel to political power.",
+  "telegramLink": "_",
+  "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream",
+  "comingSoon": true,
+  "is18PlusAdult": true
+    },
+    {
   "title": "Ek Deewane Ki Deewaniyat",
   "poster": "images/D.jpg",
   "genres": ["Romance", "Drama", "Thriller"],
