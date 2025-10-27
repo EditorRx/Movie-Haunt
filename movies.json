@@ -574,7 +574,12 @@
       "https://t.me/MovieHaunters/88",
       "https://t.me/MovieHaunters/89",
       "https://t.me/MovieHaunters/90"
-    ]
+    ],
+      "episodeNames": [
+  "New Rules", "The Ultimate Gamble", "Broken Alliances",
+  "Rise of the Fallen", "The Game Master’s Secret",
+  "Betrayal Circle", "Final Countdown", "Only One Survives"
+],
   },
   {
     "title": "Minecraft",
@@ -690,7 +695,12 @@
       "https://t.me/MovieHaunters/73",
       "https://t.me/MovieHaunters/74",
       "https://t.me/MovieHaunters/80"
-    ]
+    ],
+        "episodeNames": [
+  "The Player Returns", "New Frontiers", "The Recruitment Game",
+  "Blood and Honor", "Divide to Survive", "Masks and Motives",
+  "The Bridge of Fate", "Endgame"
+],
     },
 {
   "title": "Sonic the Hedgehog 2",
@@ -779,6 +789,11 @@
       "https://t.me/MovieHaunters/61",
       "https://t.me/MovieHaunters/66"
     ],
+          "episodeNames": [
+  "Red Light, Green Light", "Hell", "The Man with the Umbrella",
+  "Stick to the Team", "A Fair World", "Gganbu", "VIPs",
+  "Front Man", "One Lucky Day"
+],
     "is18PlusAdult": true,
     "is18PlusBrutal": false
   },
