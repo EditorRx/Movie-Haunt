@@ -421,3 +421,84 @@ window.addMovie = function(movie) {
 
   } catch(err) { console.error("Voice search setup failed:", err); }
 })();
+
+// Episode names 
+function openEpisodesModal(series) {
+  seriesName.innerText = series.title || "Untitled Series";
+  episodesList.innerHTML = "";
+  const links = series.episodeLinks || [];
+  const episodeNames = series.episodeNames || links.map((_, index) => `Episode ${index + 1}`); // Fallback to numbered episodes
+
+  const itemsPerPage = 8;
+  let currentPage = 1;
+
+  function renderEpisodes(page) {
+    episodesList.innerHTML = "";
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const pageLinks = links.slice(start, end);
+    const pageNames = episodeNames.slice(start, end);
+
+    pageLinks.forEach((link, index) => {
+      const episodeIndex = start + index;
+      const li = document.createElement("div");
+      li.className = "episode-item";
+
+      const episodeNum = document.createElement("span");
+      episodeNum.className = "episode-num";
+      episodeNum.textContent = `Episode ${episodeIndex + 1}`;
+
+      const episodeName = document.createElement("span");
+      episodeName.className = "episode-name";
+      episodeName.textContent = pageNames[index] || `Episode ${episodeIndex + 1}`;
+
+      const getButton = document.createElement("a");
+      getButton.className = "episode-get";
+      getButton.href = link || "#";
+      getButton.target = "_blank";
+      getButton.rel = "noopener";
+      getButton.textContent = "Get";
+
+      li.appendChild(episodeNum);
+      li.appendChild(episodeName);
+      li.appendChild(getButton);
+      episodesList.appendChild(li);
+    });
+
+    // Pagination
+    const totalPages = Math.ceil(links.length / itemsPerPage);
+    const paginationDiv = document.createElement("div");
+    paginationDiv.className = "episode-pagination";
+
+    if (currentPage > 1) {
+      const prevButton = document.createElement("button");
+      prevButton.textContent = "Prev";
+      prevButton.className = "episode-prev";
+      prevButton.onclick = () => {
+        currentPage--;
+        renderEpisodes(currentPage);
+      };
+      paginationDiv.appendChild(prevButton);
+    }
+
+    if (currentPage < totalPages) {
+      const nextButton = document.createElement("button");
+      nextButton.textContent = "Next";
+      nextButton.className = "episode-next";
+      nextButton.onclick = () => {
+        currentPage++;
+        renderEpisodes(currentPage);
+      };
+      paginationDiv.appendChild(nextButton);
+    }
+
+    episodesList.appendChild(paginationDiv);
+  }
+
+  renderEpisodes(currentPage);
+  episodesModal.style.display = "flex";
+}
+
+function closeEpisodesModal() { episodesModal.style.display = "none"; }
+
+// [Rest of the existing code remains the same]
