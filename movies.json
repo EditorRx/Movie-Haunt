@@ -419,7 +419,7 @@
       "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream"
   },
     {
-  "title": "The Ba***ds of Bollywood",
+  "title": "The Ba***ds of Bollywood S01",
   "poster": "images/Koki.jpg",
   "description": "Ambitious outsider navigates chaotic Bollywood underworld.",
   "rating": "7.6",
@@ -436,7 +436,11 @@
      "https://www.filmyzilla26.com/downloads/32417/1/server_1/",
      "https://www.filmyzilla26.com/downloads/32418/1/server_1/",
      "https://www.filmyzilla26.com/downloads/32419/1/server_1/"
- ]
+ ],
+  "episodeNames": [
+  "City of Lies", "Dirty Fame", "Casting Couch", "Power and Deception",
+  "Behind Closed Doors", "Broken Dreams", "Dark Truths", "The End Game"
+],
     },
   {
     "title": "Wednesday Season 2",
@@ -457,7 +461,12 @@
       "https://t.me/MovieHaunters/232",
       "https://t.me/MovieHaunters/233",
       "https://t.me/MovieHaunters/234"
-    ]
+    ],
+      "episodeNames": [
+  "A New Semester", "Dark Whispers", "Raven’s Return",
+  "The Secret Society", "Midnight Shadows", "Wicked Games",
+  "The Family Curse", "The Final Spell"
+],
   },
   {
     "title": "Mahavatar Narshima",
