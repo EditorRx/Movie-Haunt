@@ -409,7 +409,7 @@ body {
     margin-bottom: 10px;
 }
 .episodes-list a {
-    color: #ffff00;
+    color: #000;
     font-weight: 600;
     text-decoration: none;
 }
@@ -573,28 +573,28 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 10px;
-  padding: 16px;
+  padding: 10px;
 }
 
 .episode-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px;
+  padding: 8.8px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
+  border-radius: 5px;
   color: #e64545;
 }
 
 .episode-num {
-  font-weight: 600;
+  font-weight: 666;
   margin-right: 7px;
 }
 
 .episode-name {
   flex-grow: 1;
-  font-weight: 500;
-  color: #f0ec1d;
+  font-weight: 700;
+  color: #fff000;
   margin-left: 8px;
   margin-right: 12px;
 }
@@ -606,15 +606,15 @@ body {
   text-decoration: none;
   font-weight: 600;
   border: 1px solid transparent;
-  background: #75db70; /* Matches Watch Online background */
-  color: #1a1a1a; /* Matches Watch Online text color */
-  box-shadow: 0 0 10px rgba(191, 250, 95, 0.5); /* Matches Watch Online shadow */
+  background: greenyellow;
+  color: #000;
+  box-shadow: 0 0 10px rgba(191, 250, 95, 0.5);
   transition: background 0.3s, box-shadow 0.3s;
 }
 
 .episode-get:hover {
-  background: #5eeb4b; /* Matches Watch Online hover background */
-  box-shadow: 0 0 10px rgba(191, 250, 95, 0.7); /* Matches Watch Online hover shadow */
+  background: #5eeb4b;
+  box-shadow: 0 0 10px rgba(191, 250, 95, 0.7);
   text-decoration: none;
 }
 
