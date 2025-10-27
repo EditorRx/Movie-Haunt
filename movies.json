@@ -440,8 +440,8 @@
   "episodeNames": [
   "City of Lies", "Dirty Fame", "Casting Couch", "Power and Deception",
   "Behind Closed Doors", "Broken Dreams", "Dark Truths", "The End Game"
-],
-    },
+]
+},
   {
     "title": "Wednesday Season 2",
     "poster": "images/wednesday2.jpg",
@@ -466,8 +466,8 @@
   "A New Semester", "Dark Whispers", "Raven’s Return",
   "The Secret Society", "Midnight Shadows", "Wicked Games",
   "The Family Curse", "The Final Spell"
-],
-  },
+]
+},
   {
     "title": "Mahavatar Narshima",
     "poster": "images/mahavatarnarshima.jpg",
@@ -588,8 +588,8 @@
   "New Rules", "The Ultimate Gamble", "Broken Alliances",
   "Rise of the Fallen", "The Game Master’s Secret",
   "Betrayal Circle", "Final Countdown", "Only One Survives"
-],
-  },
+]
+},
   {
     "title": "Minecraft",
     "poster": "images/minecraft.jpg",
@@ -709,8 +709,8 @@
   "The Player Returns", "New Frontiers", "The Recruitment Game",
   "Blood and Honor", "Divide to Survive", "Masks and Motives",
   "The Bridge of Fate", "Endgame"
-],
-    },
+]
+},
 {
   "title": "Sonic the Hedgehog 2",
   "poster": "images/Sonic2.jpg",
