@@ -859,14 +859,16 @@
       "https://hubstream.art/#bgagum"
     ],
        "episodeNames": [
-      "Pilot", "The Devil’s Awakening", "Sin City", "The One with the Devil",
-      "Hell’s Kitchen", "Lucifer’s Game", "Dark Secrets", "Redemption Arc",
-      "Fallen Angel", "Crime and Punishment", "Love in Hell", "Final Stand",
-      "Devil’s Deal", "Heaven’s Call", "Twist of Fate", "Last Episode",
-      "Shadow of Sin", "Eternal Flame", "Devil’s Dance", "Soul Search",
-      "Inferno", "Divine Justice", "Hellbound", "Lucifer’s Choice",
-      "Redemption Song", "Final Judgment"
-    ],
+  "They're Back, Aren't They?", "The One with the Baby Carrot", "Mr. and Mrs. Mazikeen Smith",
+  "What Would Lucifer Do?", "Welcome Back, Charlotte Richards", "Vegas with Some Radish",
+  "Off the Record", "Chloe Does Lucifer", "The Sinnerman", "The Sin Bin",
+  "City of Angels?", "All About Her", "Til Death Do Us Part",
+  "My Brother's Keeper", "High School Poppycock", "Infernal Guinea Pig",
+  "Let Pinhead Sing!", "The Last Heartbreak", "Orange Is the New Maze",
+  "The Angel of San Bernardino", "Anything Pierce Can Do I Can Do Better",
+  "All Hands on Decker", "Quintessential Deckerstar", "A Devil of My Word",
+  "Boo Normal", "Once Upon a Time"
+       ],
     "is18PlusAdult": true,
     "is18PlusBrutal": false
   },
@@ -900,6 +902,14 @@
       "https://hubstream.art/#pkmsmv",
       "https://hubstream.art/#gezmw8"
     ],
+      "episodeNames": [
+  "Everything's Coming Up Lucifer", "Liar, Liar, Slutty Dress on Fire",
+  "Sin-Eater", "Lady Parts", "Weaponizer", "Monster", "My Little Monkey",
+  "Trip to Stabby Town", "Homewrecker", "Quid Pro Ho",
+  "Stewardess Interruptus", "Love Handles", "A Good Day to Die",
+  "Candy Morningstar", "Deceptive Little Parasite", "God Johnson",
+  "Sympathy for the Goddess", "The Good, the Bad and the Crispy"
+      ],
     "is18PlusAdult": true,
     "is18PlusBrutal": false
   },
@@ -928,6 +938,12 @@
       "https://t.me/MovieHaunters/182",
       "https://t.me/MovieHaunters/183"
     ],
+      "episodeNames": [
+  "Pilot", "Lucifer, Stay. Good Devil.", "The Would-Be Prince of Darkness",
+  "Manly Whatnots", "Sweet Kicks", "Favorite Son", "Wingman",
+  "Et Tu, Doctor?", "A Priest Walks Into a Bar", "Pops",
+  "St. Lucifer", "#TeamLucifer", "Take Me Back to Hell"
+      ],
     "is18PlusAdult": true,
     "is18PlusBrutal": false
   },
