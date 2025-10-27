@@ -560,3 +560,89 @@ body {
   color: #ccc;
   margin-left: 6px;
 }
+
+/* Episodes Modal */
+.episodes-modal .modal-inner {
+    border: 2px solid #9e54e3;
+}
+
+.episodes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10px;
+  padding: 16px;
+}
+
+.episode-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  color: #e64545;
+}
+
+.episode-num {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.episode-name {
+  flex-grow: 1;
+  font-weight: 500;
+  color: #f0ec1d;
+  margin-left: 8px;
+  margin-right: 12px;
+}
+
+.episode-get {
+  display: inline-block;
+  padding: 4px 7px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+  background: #75db70; /* Matches Watch Online background */
+  color: #1a1a1a; /* Matches Watch Online text color */
+  box-shadow: 0 0 10px rgba(191, 250, 95, 0.5); /* Matches Watch Online shadow */
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.episode-get:hover {
+  background: #5eeb4b; /* Matches Watch Online hover background */
+  box-shadow: 0 0 10px rgba(191, 250, 95, 0.7); /* Matches Watch Online hover shadow */
+  text-decoration: none;
+}
+
+.episode-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.episode-prev, .episode-next {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.episode-prev:hover, .episode-next:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Ensure modal content doesn’t overflow */
+.episodes-modal .modal-body {
+  flex-direction: column;
+  align-items: center;
+}
