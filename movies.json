@@ -9,6 +9,40 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "Stranger Things Season 1",
+  "poster": "images/StrangerThingsS1.jpg",
+  "description": "Young friends uncover dark supernatural secrets in Hawkins.(8 episodes)",
+  "rating": "8.6",
+  "length": "Approx 45-55m each episode",
+  "language": ["English", "Hindi dubbed"],
+  "genres": ["Sci-Fi", "Horror", "Webseries"],
+  "releaseDate": "2016-07-15",
+  "type": "series",
+  "episodeLinks": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+  ],
+  "episodeNames": [
+    "The Vanishing of Will Byers",
+    "The Weirdo on Maple Street",
+    "Holly, Jolly",
+    "The Body",
+    "The Flea and the Acrobat",
+    "The Monster",
+    "The Bathtub",
+    "The Upside Down"
+  ],
+  "is18PlusAdult": false,
+  "is18PlusBrutal": false,
+  "comingSoon": true
+},
+    {
   "title": "Gangubai Kathiawadi",
   "poster": "images/G.jpg",
   "genres": ["Biography", "Crime", "Drama"],
