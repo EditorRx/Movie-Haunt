@@ -443,7 +443,7 @@
   {
     "title": "Udaipur Files",
     "poster": "images/udaipurfiles.png",
-    "genres": ["True story"],
+    "genres": ["True story", "Crime"],
     "rating": "6.8",
     "length": "2h 05m",
     "language": "Hindi",
@@ -483,7 +483,7 @@
     "rating": "8.0",
     "length": "Approx 60m each episode",
     "language": ["Hindi dubbed", "English" ],
-    "genres": ["Horror", "webseries"],
+    "genres": ["Horror", "Webseries"],
     "releaseDate": "2025-08-06",
     "type": "series",
     "episodeLinks": [
@@ -591,7 +591,7 @@
   {
   "title": "Pushpa 2: The Rule – Reloaded Version",
   "poster": "images/Pushpa2Reloaded.jpg",
-  "genres": ["Action", "Drama", "crime"],
+  "genres": ["Action", "Drama", "Crime"],
   "rating": "7.1",
   "length": "3h 44m",
   "language": "Hindi",
@@ -607,7 +607,7 @@
     "rating": "8.0",
     "length": "Approx 47m each episode",
     "language": ["Hindi dubbed", "English"],
-    "genres": ["Thriller", "webseries"],
+    "genres": ["Thriller", "Webseries"],
     "releaseDate": "2025-07-27",
     "type": "series",
     "episodeLinks": [
@@ -727,7 +727,7 @@
     "rating": "8.0",
     "length": "Approx 47m each episode",
     "language": ["Hindi dubbed", "English"],
-    "genres": ["Thriller", "webseries"],
+    "genres": ["Thriller", "Webseries"],
     "releaseDate": "2024-12-26",
     "type": "series",
     "episodeLinks": [
@@ -748,7 +748,7 @@
 {
   "title": "Sonic the Hedgehog 2",
   "poster": "images/Sonic2.jpg",
-  "genres": ["comedy", "Action"],
+  "genres": ["Comedy", "Action"],
   "rating": "6.5",
   "length": "2h 2m",
   "language": "Hindi",
@@ -818,7 +818,7 @@
     "rating": "8.3",
     "length": "Approx 55m each episode",
     "language": ["Hindi dubbed", "English"],
-    "genres": ["Thriller", "webseries"],
+    "genres": ["Thriller", "Webseries"],
     "releaseDate": "2021-09-17",
     "type": "series",
     "episodeLinks": [
@@ -885,7 +885,7 @@
     "rating": "8.0",
     "length": "Approx 45m each episode",
     "language": "Hindi dubbed",
-    "genres": ["Drama" , "webseries"],
+    "genres": ["Drama" , "Webseries"],
     "releaseDate": "2017-10-02",
     "type": "series",
     "episodeLinks": [
@@ -937,7 +937,7 @@
     "rating": "8.1",
     "length": "Approx 45m each episode",
     "language": ["Hindi dubbed", "English"],
-    "genres": ["Drama", "webseries"],
+    "genres": ["Drama", "Webseries"],
     "releaseDate": "2016-09-19",
     "type": "series",
     "episodeLinks": [
@@ -978,7 +978,7 @@
     "rating": "8.1",
     "length": "Approx 45m each episode",
     "language": ["Hindi dubbed", "English"],
-    "genres": ["Drama", "webseries"],
+    "genres": ["Drama", "Webseries"],
     "releaseDate": "2016-01-25",
     "type": "series",
     "episodeLinks": [
