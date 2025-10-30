@@ -9,6 +9,25 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
     {
+  "title": "Stranger Things Season 2",
+  "poster": "images/StrangerThings2.jpg",
+  "description": "Kids face new threats from the Upside Down.",
+  "rating": "8.7",
+  "length": "Approx 50m each episode",
+  "language": ["Hindi dubbed", "English"],
+  "genres": ["Sci-Fi", "Thriller", "webseries"],
+  "releaseDate": "2017-10-27",
+  "type": "series",
+  "episodeLinks": [
+      
+  ],
+  "episodeNames": [
+    "MADMAX", "Trick or Treat, Freak", "The Pollywog", "Will the Wise",
+    "Dig Dug", "The Spy", "The Lost Sister", "The Mind Flayer", "The Gate"
+  ],
+  "comingSoon": true
+},
+    {
   "title": "Stranger Things Season 1",
   "poster": "images/StrangerThingsS1.jpg",
   "description": "Young friends uncover dark supernatural secrets in Hawkins.(8 episodes)",
