@@ -61,5 +61,26 @@
   "is18PlusAdult": false,
   "is18PlusBrutal": false,
   "comingSoon": false
+},
+  {
+  "title": "Stranger Things Season 3",
+  "poster": "Pics/StrangerThings3.jpg",
+  "description": "The group faces a new deadly threat in Hawkins. (8 Episodes)",
+  "rating": "8.5",
+  "length": "Approx 50m each episode",
+  "language": ["Hindi dubbed", "English"],
+  "genres": ["Sci-Fi", "Horror", "webseries"],
+  "releaseDate": "2019-07-04",
+  "type": "series",
+  "episodeLinks": [
+  ],
+  "episodeNames": [
+    "Suzie, Do You Copy?", "The Mall Rats", "The Case of the Missing Lifeguard",
+    "The Sauna Test", "The Flayed", "E Pluribus Unum",
+    "The Bite", "The Battle of Starcourt"
+  ],
+  "is18PlusAdult": false,
+  "is18PlusBrutal": true,
+    "comingSoon": true
 }
 ]
