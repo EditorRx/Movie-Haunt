@@ -49,20 +49,22 @@ if (latestHeader && latestContent) {
   });
 }
 
-// Fetch data
-fetch(MOVIES_JSON)
-  .then(r => r.json())
-  .then(data => {
-    movies = data;
-    sortMoviesByReleaseDate(); // Sort movies by release date on load
-    buildGenreButtons();
-    renderAll();
-    updateCounters(); // total counts (movies vs webseries)
-  })
-  .catch(err => {
-    console.error("Failed to load movies.json", err);
-    moviesGrid.innerHTML = "<p style='color:#f66'>Failed to load movie list.</p>";
-  });
+// ✅ Fetch data from both movies.json and xtramovie.json
+Promise.all([
+  fetch("movies.json").then(r => r.json()).catch(() => []),
+  fetch("xtramovie.json").then(r => r.json()).catch(() => [])
+])
+.then(([mainMovies, extraMovies]) => {
+  movies = [...mainMovies, ...extraMovies]; // merge both lists
+  sortMoviesByReleaseDate(); // Sort movies by release date on load
+  buildGenreButtons();
+  renderAll();
+  updateCounters(); // total counts (movies vs webseries)
+})
+.catch(err => {
+  console.error("Failed to load JSON files", err);
+  moviesGrid.innerHTML = "<p style='color:#f66'>Failed to load movie list.</p>";
+});
 
 // Sort movies by release date (latest first)
 function sortMoviesByReleaseDate() {
