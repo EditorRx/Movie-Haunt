@@ -63,7 +63,7 @@ Promise.all([
 })
 .catch(err => {
   console.error("Failed to load JSON files", err);
-  moviesGrid.innerHTML = "<p style='color:#f66'>Failed to load movie list.</p>";
+  moviesGrid.innerHTML = "<p style='color:#26fff8'>In Maintaince - Updating Website or Adding New Features.</p>";
 });
 
 // Sort movies by release date (latest first)
