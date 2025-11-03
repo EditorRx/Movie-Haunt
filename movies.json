@@ -265,12 +265,18 @@
   "genres": ["Crime", "Drama", "Thriller", "Webseries"],
   "rating": "8.2",
   "length": "Approx 9h 45m",
+  "episodeCount": 13,
   "language": ["Hindi dubbed", "English"],
   "releaseDate": "2017-05-02",
-  "description": "Professor leads robbers in massive heist. (All 13 Episodes in 1)",
-  "telegramLink": "https://www.filmyzilla22.com/downloads/30840/1/server_1/",
-  "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream",
-      "is18PlusAdult": true,
+  "description": "Professor leads robbers in massive heist.",
+  "type": "series",
+ "episodeLinks": [
+     "https://www.filmyzilla22.com/downloads/30840/1/server_1/"
+ ],
+  "episodeNames": [
+  "All 13 Episodes in 1"
+  ]
+  "is18PlusAdult": true,
   "is18PlusBrutal": false
     },
     {
@@ -437,7 +443,7 @@
   {
     "title": "Wednesday Season 2",
     "poster": "images/wednesday2.jpg",
-    "description": "Wednesday investigates dark academy mysteries (Part 1+2).",
+    "description": "Wednesday investigates dark academy mysteries.",
     "rating": "8.0",
     "length": "Approx 60m each episode",
     "episodeCount": 8,
