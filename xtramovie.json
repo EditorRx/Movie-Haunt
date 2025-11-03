@@ -8,6 +8,28 @@
   "telegramLink": "https://filmm.me/1FFt8Hd7",
   "watchLink": "https://t.me/MovieHaunters/251"
 },
+  {
+  "title": "Stranger Things Season 4",
+  "poster": "Pics/StrangerThings4.jpg",
+  "description": "Dark secrets unfold as Vecna haunts Hawkins.",
+  "rating": "8.7",
+  "length": "Approx 60m each episode",
+  "language": ["Hindi dubbed", "English"],
+  "genres": ["Sci-Fi", "Horror", "Webseries"],
+  "releaseDate": "2022-05-27",
+  "type": "series",
+  "episodeLinks": [
+    
+  ],
+  "episodeNames": [
+    "The Hellfire Club", "Vecna’s Curse", "The Monster and the Superhero",
+    "Dear Billy", "The Nina Project", "The Dive",
+    "The Massacre at Hawkins Lab", "Papa", "The Piggyback"
+  ],
+  "is18PlusAdult": false,
+  "is18PlusBrutal": true,
+  "comingSoon": true
+},
     {
   "title": "Stranger Things Season 2",
   "poster": "images/StrangerThings2.jpg",
@@ -15,7 +37,7 @@
   "rating": "8.7",
   "length": "Approx 50m each episode",
   "language": ["Hindi dubbed", "English"],
-  "genres": ["Sci-Fi", "Thriller", "webseries"],
+  "genres": ["Sci-Fi", "Thriller", "Webseries"],
   "releaseDate": "2017-10-27",
   "type": "series",
   "episodeLinks": [
@@ -76,7 +98,7 @@
   "rating": "8.5",
   "length": "Approx 50m each episode",
   "language": ["Hindi dubbed", "English"],
-  "genres": ["Sci-Fi", "Horror", "webseries"],
+  "genres": ["Sci-Fi", "Horror", "Webseries"],
   "releaseDate": "2019-07-04",
   "type": "series",
   "episodeLinks": [
