@@ -24,6 +24,7 @@ const modalRelease = document.getElementById("modalRelease");
 const modalLink = document.getElementById("modalLink");
 const modalWatchOnline = document.getElementById("modalWatchOnline");
 const modalWarning = document.getElementById("modalWarning");
+const vpnWarning = document.getElementById("vpnWarning"); // VPN Warning
 
 // episodes modal elements
 const episodesModal = document.getElementById("episodesModal");
@@ -320,6 +321,8 @@ function openModal(movie) {
   } else {
     modalWarning.textContent = "";
   }
+    // VPN WARNING — SHOW/HIDE
+  vpnWarning.style.display = movie.useVpn === true ? "block" : "none";
 
   modal.style.display = "flex";
 }
