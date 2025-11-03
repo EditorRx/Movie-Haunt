@@ -288,7 +288,15 @@ function openModal(movie) {
   modalRating.innerText = movie.rating || "—";
   modalGenres.innerText = (movie.genres || []).join(", ") || "—";
   modalRelease.innerText = movie.releaseDate || "—";
-
+// Episodes count for webseries only
+const episodeElement = document.getElementById("modalEpisodes");
+const episodeCountSpan = document.getElementById("episodeCount");
+if (movie.type && movie.type.toLowerCase() === "series" && movie.episodeCount) {
+  episodeCountSpan.textContent = movie.episodeCount;
+  episodeElement.style.display = "list-item";
+} else {
+  episodeElement.style.display = "none";
+}
   const langText = Array.isArray(movie.language) ? movie.language.join(", ") : (movie.language || "");
   modalLanguage.innerText = langText || "—";
   modalLength.innerText = movie.length || "—";
