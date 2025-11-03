@@ -627,3 +627,11 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+#vpnWarning {
+  display: none; color: #ffeb3b !important; font-weight: 600; font-size: 0.95rem;
+  margin-top: 16px; text-align: center; padding: 6px 12px;
+  background: rgba(255, 235, 59, 0.1); border: 2px solid #ffeb3b;
+  border-radius: 12px; box-shadow: 0 0 12px rgba(255, 235, 59, 0.4);
+  max-width: 90%; margin-left: auto; margin-right: auto;
+}
