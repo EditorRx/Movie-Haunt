@@ -442,7 +442,7 @@ function openEpisodesModal(series) {
   const links = series.episodeLinks || [];
   const episodeNames = series.episodeNames || links.map((_, index) => `Episode ${index + 1}`); // Fallback to numbered episodes
 
-  const itemsPerPage = 8;
+  const itemsPerPage = 5;
   let currentPage = 1;
 
   function renderEpisodes(page) {
