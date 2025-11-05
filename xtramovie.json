@@ -111,9 +111,9 @@
       "https://t.me/MovieHaunters/426",
       "https://t.me/MovieHaunters/427",
       "https://t.me/MovieHaunters/428",
-      "",
-      "",
-      ""
+      "https://t.me/MovieHaunters/431",
+      "https://t.me/MovieHaunters/432",
+      "https://t.me/MovieHaunters/433"
   ],
   "episodeNames": [
     "Suzie, Do You Copy?", "The Mall Rats", "The Case of the Missing Lifeguard",
@@ -121,7 +121,6 @@
     "The Bite", "The Battle of Starcourt"
   ],
   "is18PlusAdult": false,
-  "is18PlusBrutal": true,
-    "comingSoon": true
+  "is18PlusBrutal": true
 }
 ]
