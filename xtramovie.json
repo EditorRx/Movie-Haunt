@@ -9,6 +9,20 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
   {
+  "title": "New York",
+  "poster": "Pics/NewYork.jpg",
+  "genres": ["Drama", "Thriller"],
+  "rating": "6.8",
+  "length": "2h 33m",
+  "language": ["Hindi"],
+  "releaseDate": "2009-06-26",
+  "description": "Friends' lives change after 9/11 tragedy.",
+  "telegramLink": "_",
+  "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream",
+  "is18PlusAdult": false,
+  "comingSoon": true
+},
+  {
   "title": "Stranger Things Season 4",
   "poster": "Pics/StrangerThings4.jpg",
   "description": "Dark secrets unfold as Vecna haunts Hawkins.",
@@ -28,7 +42,7 @@
     "https://t.me/MovieHaunters/443",
     "https://t.me/MovieHaunters/444",
     "https://t.me/MovieHaunters/445",
-    ""
+    "https://gadgetsweb.xyz/?id=MjlZbVJNdTR4bDhuYThzUWZSbXl3bi94VFFrZEdCSVcyb1l4K00xZ1YrVlAzRUhra2NnYU9qeUhjdVh6NXdkZnM4ZWhiZ0JiRGp5MmVOQUdONEhFaUNMOEFacWxvVDZBNTRtTEVMYVNuTEE9"
   ],
   "episodeNames": [
     "The Hellfire Club", "Vecna’s Curse", "The Monster and the Superhero",
