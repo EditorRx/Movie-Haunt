@@ -9,6 +9,20 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
   {
+  "title": "Jolly LLB 3 (2025)",
+  "poster": "Pics/Jolly.jpg",
+  "description": "Jolly returns to face his toughest legal battle.",
+  "rating": "6.9",
+  "length": "2h 37m",
+  "language": ["Hindi"],
+  "genres": ["Courtroom", "Drama", "Comedy"],
+  "releaseDate": "2025",
+  "type": "movie",
+  "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream",
+  "is18PlusAdult": false,
+  "is18PlusBrutal": false
+},
+  {
   "title": "New York",
   "poster": "Pics/NewYork.jpg",
   "genres": ["Drama", "Thriller"],
