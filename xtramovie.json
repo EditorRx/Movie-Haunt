@@ -9,6 +9,20 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
   {
+  "title": "Terminator: Dark Fate",
+  "poster": "Pics/TerminatorDF.jpg",
+  "genres": ["Action", "Sci-Fi"],
+  "rating": "6.2",
+  "length": "2h 8m",
+  "language": ["English", "Hindi dubbed"],
+  "releaseDate": "2019-11-01",
+  "description": "New protector fights deadly upgraded Terminator.",
+  "telegramLink": "_",
+  "watchLink": "https://Smart.openinapp.link/Moviehaunt-stream",
+  "comingSoon": true,
+  "is18PlusAdult": false
+},
+  {
   "title": "Jolly LLB 3",
   "poster": "Pics/Jolly.jpg",
   "genres": ["Courtroom", "Drama", "Comedy"],
