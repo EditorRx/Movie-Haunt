@@ -514,11 +514,4 @@ function openEpisodesModal(series) {
 
 function closeEpisodesModal() { episodesModal.style.display = "none"; }
 
-const maintenanceMode = false; // false = website normal | true = maintenance ON
-
-if (maintenanceMode) {
-  document.getElementById("maintenanceFull").style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
-
 // [Rest of the existing code remains the same]
