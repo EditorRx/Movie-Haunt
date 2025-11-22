@@ -514,7 +514,7 @@ function openEpisodesModal(series) {
 
 function closeEpisodesModal() { episodesModal.style.display = "none"; }
 
-const maintenanceMode = true; // false = website normal | true = maintenance ON
+const maintenanceMode = false; // false = website normal | true = maintenance ON
 
 if (maintenanceMode) {
   document.getElementById("maintenanceFull").style.display = "flex";
