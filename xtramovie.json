@@ -19,16 +19,19 @@
   "genres": ["Sci-Fi", "Horror", "Webseries"],
   "releaseDate": "2025-11-26",
   "type": "series",
-  "episodeLinks": [],
+  "episodeLinks": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
   "episodeNames": [
-    "The Beginning of the End",
-    "Echoes of the Upside Down",
-    "Blood Moon Rising",
-    "Hawkins in the Dark",
-    "The Lost Gate",
-    "Shadowfall",
-    "The Endgame",
-    "The Last Light"
+    "The Beginning of the End","Echoes of the Upside Down","Blood Moon Rising",
+    "Hawkins in the Dark","The Lost Gate","Shadowfall","The Endgame","The Last Light"
   ],
   "is18PlusAdult": false,
   "is18PlusBrutal": true,
