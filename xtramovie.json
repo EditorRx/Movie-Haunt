@@ -9,6 +9,32 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
   {
+  "title": "Stranger Things Season 5",
+  "poster": "Pics/StrangerThings5.jpg",
+  "description": "Final showdown as Hawkins faces its greatest threat.",
+  "rating": "N/A",
+  "length": "Approx 55m each episode",
+  "episodeCount": 8,
+  "language": ["Hindi dubbed", "English"],
+  "genres": ["Sci-Fi", "Horror", "webseries"],
+  "releaseDate": "2025-26-11",
+  "type": "series",
+  "episodeLinks": [],
+  "episodeNames": [
+    "The Beginning of the End",
+    "Echoes of the Upside Down",
+    "Blood Moon Rising",
+    "Hawkins in the Dark",
+    "The Lost Gate",
+    "Shadowfall",
+    "The Endgame",
+    "The Last Light"
+  ],
+  "is18PlusAdult": false,
+  "is18PlusBrutal": true,
+  "comingSoon": true
+  },
+  {
   "title": "Heeramandi Season 1",
   "poster": "Pics/Heeramandi.jpg",
   "description": "Courtesans navigate power, politics, and forbidden love.",
