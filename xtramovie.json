@@ -9,6 +9,34 @@
   "watchLink": "https://t.me/MovieHaunters/251"
 },
   {
+  "title": "Heeramandi Season 1",
+  "poster": "Pics/Heeramandi.jpg",
+  "description": "Courtesans navigate power, politics, and forbidden love.",
+  "rating": "7.2",
+  "length": "Approx 50m each episode",
+  "episodeCount": 8,
+  "language": ["Hindi"],
+  "genres": ["Drama", "Historical", "webseries"],
+  "releaseDate": "2024-05-01",
+  "type": "series",
+  "episodeLinks": [
+    "https://t.me/MovieHaunters/481",
+    "https://t.me/MovieHaunters/483",
+    "https://t.me/MovieHaunters/484",
+    "https://t.me/MovieHaunters/485",
+    "https://t.me/MovieHaunters/491",
+    "https://t.me/MovieHaunters/492",
+    "https://t.me/MovieHaunters/499",
+    "https://t.me/MovieHaunters/500"
+  ],
+  "episodeNames": [
+    "Sahir-e-Dil","Chand Raat","Fida","Dastak",
+    "Begum's Gambit","Khilafat","Rebel Hearts","Heeramandi"
+  ],
+  "is18PlusAdult": true,
+  "is18PlusBrutal": false
+  },
+  {
   "title": "Radhe Shyam",
   "poster": "Pics/RadheShyam.jpg",
   "genres": ["Romance", "Drama"],
