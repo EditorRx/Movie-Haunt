@@ -22,8 +22,8 @@
   "episodeLinks": [
     "https://t.me/MovieHaunters/505",
     "https://t.me/MovieHaunters/507",
-    "",
-    "",
+    "https://t.me/MovieHaunters/508",
+    "https://t.me/MovieHaunters/509",
     "",
     "",
     "",
@@ -35,7 +35,7 @@
   ],
   "is18PlusAdult": false,
   "is18PlusBrutal": true,
-  "comingSoon": true
+  "comingSoon": false
   },
   {
   "title": "Heeramandi Season 1",
