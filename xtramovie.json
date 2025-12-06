@@ -3,11 +3,26 @@
   "title": "Castle app download Tutorial",
   "poster": "images/Ad.jpg",
   "length": "57sec",
-  "releaseDate": "2025-12-2",
+  "releaseDate": "2025-12-6",
   "description": "Watch any movie in free - Faster than anyone 🎥 (Click on download to download App)",
   "telegramLink": "https://filmm.me/1FFt8Hd7",
   "watchLink": "https://t.me/MovieHaunters/251"
 },
+  {
+  "title": "Dhurandhar",
+  "poster": "Pics/Dhurandhar.jpg",
+  "genres": ["Action", "Thriller"],
+  "rating": "7.7",
+  "length": "3h 32m",
+  "language": ["Hindi"],
+  "releaseDate": "2025-12-05",
+  "description": "A network of criminals and covert operatives clash in a saga of espionage, betrayal, and underground warfare.",
+  "telegramLink": "https://t.me/MovieHaunters/???",
+  "watchLink": "https://Now.oia.bio/STRIDE",
+  "is18PlusAdult": false,
+  "comingSoon": true,
+  "is18PlusBrutal": true
+  },
   {
   "title": "Tere Ishk Mein",
   "poster": "Pics/TIM.jpg",
