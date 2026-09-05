@@ -282,5 +282,24 @@
   ],
   "is18PlusAdult": false,
   "is18PlusBrutal": true
-  }
+  },
+
+  {
+  "title": "India's Got Latent S2",
+  "poster": "Pics/IndiasGotLatentS1E6.jpg",
+  "description": "Contestants face hilarious critiques from Samay and guest judges.",
+  "rating": "9.1",
+  "length": "43m",
+  "episodeCount": 1,
+  "language": ["Hindi"],
+  "genres": ["Comedy", "Reality", "webseries"],
+  "releaseDate": "2026-09-4",
+  "type": "series",
+  "episodeLinks": [https://t.me/Movieshaunt2/111],
+  "episodeNames": [
+    "#6 ft. Varun Dhawan"
+  ],
+  "is18PlusAdult": false,
+  "is18PlusBrutal": false
+}
 ]
