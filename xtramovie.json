@@ -301,5 +301,19 @@
   ],
   "is18PlusAdult": false,
   "is18PlusBrutal": false
+},
+
+  {
+  "title": "Tron: Ares",
+  "poster": "Pics/TronAres.jpg",
+  "genres": ["Action", "Sci-Fi", "Adventure"],
+  "rating": "6.1",
+  "length": "1h 59m",
+  "language": ["English", "Hindi dubbed"],
+  "releaseDate": "2025-10-10",
+  "description": "Ares enters the real world, changing humanity's future.",
+  "telegramLink": "https://t.me/Movieshaunt2/112",
+  "watchLink": "https://youtube.com/@punisher_exe?si=sRQR7QMrAn6cjQZz",
+  "is18PlusAdult": false
 }
 ]
